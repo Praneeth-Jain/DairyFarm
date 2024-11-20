@@ -17,39 +17,51 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DairyFarm
 build_property.RootNamespace = DairyFarm
-build_property.ProjectDir = C:\Users\user\source\repos\DairyFarm\
+build_property.ProjectDir = C:\Users\user\Desktop\project\DairyFarm\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\DairyFarm
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\project\DairyFarm
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/source/repos/DairyFarm/Pages/Error.cshtml]
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Cattle/AddCattle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0dGxlXEFkZENhdHRsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/DairyFarm/Pages/Index.cshtml]
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/DairyFarm/Pages/Privacy.cshtml]
+[C:/Users/user/Desktop/project/DairyFarm/Pages/OwnerLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3duZXJMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/project/DairyFarm/Pages/OwnerRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3duZXJSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/DairyFarm/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/DairyFarm/Pages/_ViewImports.cshtml]
+[C:/Users/user/Desktop/project/DairyFarm/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/DairyFarm/Pages/_ViewStart.cshtml]
+[C:/Users/user/Desktop/project/DairyFarm/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/DairyFarm/Pages/Shared/_Layout.cshtml]
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-is24ah91ky

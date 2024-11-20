@@ -1,0 +1,42 @@
+﻿@page
+@model DairyFarm.Pages.OwnerRegisterModel
+@{
+}
+
+<div>
+    <h1>
+        Owner Register
+    </h1>
+</div>
+
+<form method="post">
+    <div class="form-group mb-3">
+        <lable class="control-lable" asp-for="reg.OwnerName">Owner Name</lable>
+        <input class="form-control" asp-for="reg.OwnerName" placeholder="Enter your Name"/>
+        <span asp-validation-for="reg.OwnerName" class="bg-danger text-light"></span>
+    </div>
+    <div class="form-group mb-3">
+        <lable class="control-lable" asp-for="reg.OwnerEmail">Owner Email</lable>
+        <input class="form-control" asp-for="reg.OwnerEmail" placeholder="Enter your Email"/>
+        <span asp-validation-for="reg.OwnerEmail" class="bg-danger text-light"></span>
+    </div>
+    
+    <div class="form-group mb-3">
+        <lable class="control-lable" asp-for="reg.OwnerPassword">Owner Password</lable>
+        <input type="password" class="form-control" asp-for="reg.OwnerPassword" placeholder="Enter your Password" />
+        <span asp-validation-for="reg.OwnerPassword" class="bg-danger text-light"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <lable class="control-lable" asp-for="reg.OwnerPhone">Owner Contact Number</lable>
+        <input class="form-control" asp-for="reg.OwnerPhone" placeholder="Enter your Contact Number" />
+        <span asp-validation-for="reg.OwnerPhone" class="bg-danger text-light"></span>
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-dark btn-lg" style="background-color: #28a745; border-color: #28a745;">Register</button>
+    </div>
+
+
+
+</form>

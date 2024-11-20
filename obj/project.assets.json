@@ -4739,11 +4739,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\DairyFarm\\DairyFarm.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\project\\DairyFarm\\DairyFarm.csproj",
       "projectName": "DairyFarm",
-      "projectPath": "C:\\Users\\user\\source\\repos\\DairyFarm\\DairyFarm.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\project\\DairyFarm\\DairyFarm.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\DairyFarm\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\project\\DairyFarm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4814,7 +4814,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

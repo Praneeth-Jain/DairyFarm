@@ -1,0 +1,46 @@
+﻿@page
+@model DairyFarm.Pages.Cattle.AddCattleModel
+@{
+}
+
+<div>
+    <h1>
+        Enter Cattle Details
+    </h1>
+</div>
+
+<form  method="post">
+    <div class="form-group">
+        <label asp-for="Cow.CowName" class="control-label">Cattle Name :</label>
+        <input asp-for="Cow.CowName" class=" form-control" placeholder="Enter the Cattle Name" />
+        <span asp-validation-for="Cow.CowName" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Cow.DOB" class="control-label">Cattle Date of Birth :</label>
+        <input type="date" asp-for="Cow.DOB" class=" form-control" placeholder="Enter the Cattle Date of Birth" />
+        <span asp-validation-for="Cow.DOB" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cow.HealthStatus" class="control-label">Cattle Health :</label>
+        <input asp-for="Cow.HealthStatus" class=" form-control" placeholder="Enter the Cattle Health" />
+        <span asp-validation-for="Cow.HealthStatus" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Cow.Breed" class="control-label">Cattle Breed :</label>
+    <select asp-for="Cow.Breed" class="form-select mt-1 mb-2" aria-label="Default select example">
+        <option selected>Select Breed</option>
+        <option value="1">Sahiwal</option>
+        <option value="2">Gir</option>
+        <option value="3">Jersey</option>
+        <option value="4">Hallikar</option>
+    </select>
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-dark btn-lg" style="background-color: #28a745; border-color: #28a745;">Register</button>
+    </div>
+
+</form>
