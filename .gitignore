@@ -1,0 +1,69 @@
+﻿# User-specific files
+.idea/
+.vs/
+.vscode/
+
+# User-specific files for JetBrains Rider
+.idea/
+
+# Windows Installer files
+Thumbs.db
+ehthumbs.db
+
+# ASP.NET Core build output
+bin/
+obj/
+
+# ASP.NET Core runtime output
+out/
+
+# Publish directory
+publish/
+
+# Local database files
+appsettings.Development.json
+
+# Entity Framework Core migrations files
+Migrations/
+
+# User secrets
+secrets/
+
+# Node.js packages
+node_modules/
+
+# npm log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# ASP.NET Core HTTPS development certificate
+https/
+
+# Windows installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# JetBrains Rider directories
+.idea/
+
+# VS Code directories
+.vscode/
+
+# MacOS files
+.DS_Store
+
+# Logs
+*.log
+
+# Backup files
+*~
+
+# .NET Core global tools
+global.json
+
+# ASP.NET Core specific config files
+appsettings.json
+appsettings.Development.json

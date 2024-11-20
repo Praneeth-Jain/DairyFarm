@@ -26,6 +26,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\DairyFarm
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/source/repos/DairyFarm/Pages/Cattle/CattleView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0dGxlXENhdHRsZVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/DairyFarm/Pages/Cattle/Partials/_CowDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0dGxlXFBhcnRpYWxzXF9Db3dEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/DairyFarm/Pages/Cattle/Partials/_CowStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0dGxlXFBhcnRpYWxzXF9Db3dTdGF0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/DairyFarm/Pages/Cattle/Partials/_FeedDetailsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0dGxlXFBhcnRpYWxzXF9GZWVkRGV0YWlsc0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/DairyFarm/Pages/Cattle/Partials/_MilkProductionForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0dGxlXFBhcnRpYWxzXF9NaWxrUHJvZHVjdGlvbkZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/DairyFarm/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

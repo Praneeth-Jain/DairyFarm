@@ -1,0 +1,76 @@
+﻿@* @model DairyFarm.Pages.Cattle.CattleViewModel
+
+<div class="cattleview-feed-form">
+    <h3>Add Feed Details</h3>
+    <form id="feed-form" method="post">
+        <input type="hidden" id="CowId" name="CowId" value="@Model.FeedLog.CowId" />
+        <div>
+            <label asp-for="@Model.FeedLog.FoodType">Food Type</label>
+            <input type="text" asp-for="@Model.FeedLog.FoodType" class="cattleview-input" />
+        </div>
+        <div>
+            <label asp-for="@Model.FeedLog.FeedDate">Date:</label>
+            <input type="date" asp-for="@Model.FeedLog.FeedDate" class="cattleview-input" />
+        </div>
+        <div>
+            <label asp-for="@Model.FeedLog.Quantity">Quantity (kg)</label>
+            <input type="number" asp-for="@Model.FeedLog.Quantity" class="cattleview-input" />
+        </div>
+        <div>
+            <label asp-for="@Model.FeedLog.Notes">Notes</label>
+            <textarea asp-for="@Model.FeedLog.Notes" class="cattleview-input"></textarea>
+        </div>
+        <button type="submit" class="cattleview-btn">Submit</button>
+    </form>
+</div>
+ *@
+
+ @model DairyFarm.Model.FeedLogModel
+
+<div class="feed-form">
+    <h3>Add Feed Details for Cow @Model.CowId</h3>
+    <form id="feed-form" method="post">
+        <input type="hidden" id="CowId" name="CowId" value="@Model.CowId" />
+        <div>
+            <label for="FoodType">Food Type</label>
+            <input type="text" id="FoodType" name="FoodType" class="form-control" value="@Model.FoodType" />
+        </div>
+        <div>
+            <label for="Quantity">Quantity (kg)</label>
+            <input type="number" id="Quantity" name="Quantity" class="form-control" value="@Model.Quantity" />
+        </div>
+        <div>
+            <label for="Notes">Notes</label>
+            <textarea id="Notes" name="Notes" class="form-control">@Model.Notes</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<script>
+    $("#feed-form").submit(function (event) {
+        event.preventDefault(); // Prevent normal form submission
+        console.log("hello ")
+        var formData = $(this).serialize(); // Serialize the form data
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Page("/Cattle/CattleView", new { handler = "AddFeed" })', // URL for POST request
+            data: formData, // Send the form data
+
+            success: function (response) {
+                // Handle the response (e.g., show a success message)
+                if (response.success) {
+                    alert("Feed log added successfully!");
+                    // Optionally, you can dynamically update part of the page without reload
+                } else {
+                    alert("There was an error adding the feed log.");
+                }
+            },
+            error: function (xhr, status, error) {
+                alert("There was an error submitting the form.");
+            }
+        });
+    });
+</script>
