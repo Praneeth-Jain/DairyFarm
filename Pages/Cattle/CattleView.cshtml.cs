@@ -16,6 +16,7 @@ namespace DairyFarm.Pages.Cattle
         [BindProperty]
         public FeedLogModel  FeedLog { get; set; }
 
+
         public CattleViewModel(ApplicationDbContext context)
         {
             _context = context;
@@ -53,11 +54,7 @@ namespace DairyFarm.Pages.Cattle
         }
 
 
-        public IActionResult OnGetMilkProductionForm(int cowId)
-        {
-            var model = new MilkProductionModel { CowId = cowId };
-            return Partial("Partials/_MilkProductionForm", model);
-        }
+        
 
         public IActionResult OnGetFeedForm(int cowId)
         {
@@ -77,7 +74,7 @@ namespace DairyFarm.Pages.Cattle
 
         public IActionResult OnPostAddFeed()
         {
-            if (!ModelState.IsValid)
+            if (!TryValidateModel(FeedLog))
             {
                 return new JsonResult(new { success = false, message = "Invalid data." });
             }
@@ -100,26 +97,37 @@ namespace DairyFarm.Pages.Cattle
         }
 
 
-        public async Task<IActionResult> OnPostSubmitMilkAsync([FromBody] MilkProductionModel model)
+        public IActionResult OnPostSubmitMilk([FromBody] MilkProductionModel model)
         {
-            Console.WriteLine(ModelState);
-            if (!ModelState.IsValid) return BadRequest("Invalid milk production data.");
+            Console.WriteLine("HEllo ee");
+            if (!ModelState.IsValid)
+            {
+                return new JsonResult(new { success = false, message = "Invalid milk production data." });
+            }
 
             var milkProduction = new MilkProduction
             {
                 CowId = model.CowId,
                 Date = model.ProductionDate,
-                MilkYieldLitres = model.Quantity,
+                MilkYieldLitres = model.Quantity
             };
 
+            // Add the new milk production record to the database
             _context.milkProductions.Add(milkProduction);
-            await _context.SaveChangesAsync();
-            return new JsonResult("Milk production added successfully.");
+
+            
+            
+                // Save the changes to the database
+                _context.SaveChangesAsync();
+            
+            
+
+            // Return a JsonResult indicating success
+            return new JsonResult(new { success = true, message = "Milk production record added successfully!" });
         }
 
 
-
     }
-    }
+}
 
 

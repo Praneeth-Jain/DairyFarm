@@ -28,7 +28,7 @@
  @model DairyFarm.Model.FeedLogModel
 
 <div class="feed-form">
-    <h3>Add Feed Details for Cow @Model.CowId</h3>
+    <h3>Add Feed Details</h3>
     <form id="feed-form" method="post">
         <input type="hidden" id="CowId" name="CowId" value="@Model.CowId" />
         <div>
@@ -62,14 +62,15 @@
             success: function (response) {
                 // Handle the response (e.g., show a success message)
                 if (response.success) {
-                    alert("Feed log added successfully!");
+                    $(".feed-form").html('<p class="success-message">Feed record added successfully!</p>');
+
                     // Optionally, you can dynamically update part of the page without reload
                 } else {
-                    alert("There was an error adding the feed log.");
+                    $(".feed-form").html('<p class="error-message">Error while Feed record </p>');
                 }
-            },
+            },  
             error: function (xhr, status, error) {
-                alert("There was an error submitting the form.");
+                    $(".feed-form").html('<p class="error-message">Error while Feed record </p>');
             }
         });
     });
