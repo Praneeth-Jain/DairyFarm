@@ -1,0 +1,35 @@
+﻿@page
+@model DairyFarm.Pages.Forms.ExpenseModel
+@{
+}
+<div>
+    <h1>
+        Expense
+    </h1>
+</div>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="exp.Category" class="control-label">Category :</label>
+        <input asp-for="exp.Category" class=" form-control" placeholder="Enter Category" />
+        <span asp-validation-for="exp.Category" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="exp.Amount" class="control-label">Amount :</label>
+        <input asp-for="exp.Amount" class=" form-control" placeholder="Enter Amount" />
+        <span asp-validation-for="exp.Amount" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="exp.Date" class="control-label">Date :</label>
+        <input type="date" asp-for="exp.Date" class=" form-control" placeholder="Enter Date" />
+        <span asp-validation-for="exp.Date" class="text-danger"></span>
+    </div>
+
+    <div class="d-grid gap-2">
+    <button type="submit" class="btn btn-dark btn-lg" style="background-color: #28a745; border-color: #28a745;">Done</button>
+    </div>
+
+
+</form>

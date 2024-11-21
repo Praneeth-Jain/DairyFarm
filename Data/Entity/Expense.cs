@@ -7,6 +7,8 @@ namespace DairyFarm.Data.Entity
         [Key]
         public int Id { get; set; }
 
+        
+        public int OwnerId { get; set; }
         public int? CowId { get; set; }
 
         [Required]

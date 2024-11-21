@@ -34,6 +34,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Forms/Byproduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcQnlwcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Forms/Expense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcRXhwZW5zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/project/DairyFarm/Pages/Forms/Food.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcRm9vZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Desktop/project/DairyFarm/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,17 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DairyFarm.Pages.Model
+namespace DairyFarm.Model
 {
     public class OwnerRegisterClass
     {
         [Required]
-        public string OwnerName {  get; set; }
+        public string OwnerName { get; set; }
 
-        [Required,EmailAddress]
+        [Required, EmailAddress]
         public string OwnerEmail { get; set; }
 
         [Required]
-        public string OwnerPassword {  get; set; }
+        public string OwnerPassword { get; set; }
 
         [Required]
         public string OwnerPhone { get; set; }
