@@ -41,11 +41,25 @@ namespace DairyFarm.Pages.Cattle
                 MilkYieldLitres = MilkProductionMod.Quantity
             };
 
-            // Add the new milk production record to the database
+            var ownerID =(int) HttpContext.Session.GetInt32("OwnerID");
+
+            var milkprice = 30;
+
+            var incomevar = new Income
+            {
+                CowId = MilkProductionMod.CowId,
+                Date = MilkProductionMod.ProductionDate,
+                Amount = milkprice * MilkProductionMod.Quantity,
+                Category = "MilkProduction",
+                OwnerId = ownerID,
+            };
+
             _context.milkProductions.Add(milkProduction);
+            _context.incomes.Add(incomevar);
             _context.SaveChanges();
 
-            // Return a success response
+            TempData["MilkMsg"] = "Milk Production Record Added Succesfully";
+
             return new JsonResult(new { success = true, message = "Milk production record added successfully!" });
         }
     }

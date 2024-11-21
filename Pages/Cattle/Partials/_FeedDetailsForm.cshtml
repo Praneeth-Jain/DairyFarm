@@ -1,31 +1,4 @@
-﻿@* @model DairyFarm.Pages.Cattle.CattleViewModel
-
-<div class="cattleview-feed-form">
-    <h3>Add Feed Details</h3>
-    <form id="feed-form" method="post">
-        <input type="hidden" id="CowId" name="CowId" value="@Model.FeedLog.CowId" />
-        <div>
-            <label asp-for="@Model.FeedLog.FoodType">Food Type</label>
-            <input type="text" asp-for="@Model.FeedLog.FoodType" class="cattleview-input" />
-        </div>
-        <div>
-            <label asp-for="@Model.FeedLog.FeedDate">Date:</label>
-            <input type="date" asp-for="@Model.FeedLog.FeedDate" class="cattleview-input" />
-        </div>
-        <div>
-            <label asp-for="@Model.FeedLog.Quantity">Quantity (kg)</label>
-            <input type="number" asp-for="@Model.FeedLog.Quantity" class="cattleview-input" />
-        </div>
-        <div>
-            <label asp-for="@Model.FeedLog.Notes">Notes</label>
-            <textarea asp-for="@Model.FeedLog.Notes" class="cattleview-input"></textarea>
-        </div>
-        <button type="submit" class="cattleview-btn">Submit</button>
-    </form>
-</div>
- *@
-
- @model DairyFarm.Model.FeedLogModel
+﻿ @model DairyFarm.Model.FeedLogModel
 
 <div class="feed-form">
     <h3>Add Feed Details</h3>
@@ -33,7 +6,13 @@
         <input type="hidden" id="CowId" name="CowId" value="@Model.CowId" />
         <div>
             <label for="FoodType">Food Type</label>
-            <input type="text" id="FoodType" name="FoodType" class="form-control" value="@Model.FoodType" />
+            <select id="FoodType" name="FoodType" class="form-control">
+                <option value="">Select Food Type</option>
+                @foreach (var food in Model.FoodNames)
+                {
+                    <option value="@food.Name">@food.Name</option>
+                }
+            </select>
         </div>
         <div>
             <label for="Quantity">Quantity (kg)</label>

@@ -9,6 +9,11 @@ namespace DairyFarm.Data.Entity
 
         public int? CowId { get; set; }
 
+
+        [Required]
+        public int OwnerId { get; set; }
+
+
         [Required]
         public DateTime Date { get; set; }
 

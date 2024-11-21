@@ -3,6 +3,8 @@
 .vs/
 .vscode/
 
+./.vs/DairyFarm
+
 # User-specific files for JetBrains Rider
 .idea/
 

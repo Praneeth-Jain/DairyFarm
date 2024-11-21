@@ -63,9 +63,13 @@ namespace DairyFarm.Pages.Cattle
                 return BadRequest("Invalid Cow ID.");
             }
 
+            var foodtypes = _context.foods.Select(f => new FoodNameViewModel { Name= f.Name,PricePerKg= f.PricePerUnit }).ToList();
+
+
             var model = new FeedLogModel
             {
-                CowId = cowId
+                CowId = cowId,
+                FoodNames=foodtypes
             };
 
             return Partial("Partials/_FeedDetailsForm", model);
@@ -79,17 +83,33 @@ namespace DairyFarm.Pages.Cattle
                 return new JsonResult(new { success = false, message = "Invalid data." });
             }
 
+            var ownerID = (int)HttpContext.Session.GetInt32("OwnerID");
+
+            var pricePerKg = _context.foods.Where(r => r.Name == FeedLog.FoodType).Select(r => r.PricePerUnit).FirstOrDefault();
+            var totalPrice = pricePerKg * FeedLog.Quantity;
             var feeds = new FeedingLog
             {
                 CowId = FeedLog.CowId,
                 Date = FeedLog.FeedDate,
                 FoodName = FeedLog.FoodType,
                 QuantityKG = FeedLog.Quantity,
-                TotalCost = 500
+                TotalCost = totalPrice
             };
+            var expensevar = new Expense
+            {
+                CowId = FeedLog.CowId,
+                Amount = totalPrice,
+                Category = "Feed",
+                Date = FeedLog.FeedDate,
+                OwnerId = ownerID
+            };
+
+
 
             
             _context.feedinglogs.Add(feeds);
+            _context.expenses.Add(expensevar);
+
             _context.SaveChanges();
 
             // Return a JSON response indicating success
@@ -97,35 +117,7 @@ namespace DairyFarm.Pages.Cattle
         }
 
 
-        public IActionResult OnPostSubmitMilk([FromBody] MilkProductionModel model)
-        {
-            Console.WriteLine("HEllo ee");
-            if (!ModelState.IsValid)
-            {
-                return new JsonResult(new { success = false, message = "Invalid milk production data." });
-            }
-
-            var milkProduction = new MilkProduction
-            {
-                CowId = model.CowId,
-                Date = model.ProductionDate,
-                MilkYieldLitres = model.Quantity
-            };
-
-            // Add the new milk production record to the database
-            _context.milkProductions.Add(milkProduction);
-
-            
-            
-                // Save the changes to the database
-                _context.SaveChangesAsync();
-            
-            
-
-            // Return a JsonResult indicating success
-            return new JsonResult(new { success = true, message = "Milk production record added successfully!" });
-        }
-
+       
 
     }
 }

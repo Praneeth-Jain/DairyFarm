@@ -19,7 +19,6 @@
 
     <!-- Right Upper Div: Cow Details -->
     <div class="cattleview-right-upper">
-        <h3>Cow Details</h3>
         <div id="cattleview-details-content">
             <!-- Cow details will be loaded dynamically -->
         </div>
@@ -27,12 +26,13 @@
 
     <!-- Right Lower Div: Forms -->
     <div class="cattleview-right-lower">
-        <div class="cattleview-buttons">
-            <button id="cattleview-add-feed-btn" class="cattleview-action-btn">Add Feed Details</button>
-            <button id="cattleview-add-milk-btn" class="cattleview-action-btn">Add Milk Production</button>
-        </div>
+       
         <div id="cattleview-form-content">
             <!-- Forms will be loaded dynamically -->
+            @if (TempData["MilkMsg"] != null)
+            {
+                <div class="alert alert-success">@TempData["MilkMsg"]</div>
+            }
         </div>
     </div>
 </div>
@@ -64,47 +64,7 @@
                 $("#cattleview-form-content").empty();
             });
 
-            // Load feed form
-            $("#cattleview-add-feed-btn").on("click", function () {
-                const cowId = $(".cattleview-cow-item.active").data("cow-id");
-
-                if (!cowId) {
-                    alert("Please select a cow first.");
-                    return;
-                }
-
-                $.ajax({
-                    url: `/Cattle/CattleView?handler=FeedForm&cowId=${cowId}`,
-                    type: "GET",
-                    success: function (data) {
-                        $("#cattleview-form-content").html(data);
-                    },
-                    error: function () {
-                        alert("Failed to load feed form.");
-                    }
-                });
-            });
-
-            // Load milk production form
-            $("#cattleview-add-milk-btn").on("click", function () {
-                const cowId = $(".cattleview-cow-item.active").data("cow-id");
-
-                if (!cowId) {
-                    alert("Please select a cow first.");
-                    return;
-                }
-
-                $.ajax({
-                    url: `/Cattle/MilkProductionHandler?handler=MilkProductionForm&cowId=${cowId}`,
-                    type: "GET",
-                    success: function (data) {
-                        $("#cattleview-form-content").html(data);
-                    },
-                    error: function () {
-                        alert("Failed to load milk production form.");
-                    }
-                });
-            });
+           
 
 
            
