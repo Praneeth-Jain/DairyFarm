@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\DairyFarm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\source\\repos\\dairyfarm\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\source\\repos\\dairyfarm\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\source\\repos\\dairyfarm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\cattle\\cattleview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\source\\repos\\dairyfarm\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\source\\repos\\dairyfarm\\pages\\cattle\\partials\\_milkproductionform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\cattle\\partials\\_milkproductionform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -93,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\source\\repos\\dairyfarm\\data\\entity\\milkproduction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:data\\entity\\milkproduction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\source\\repos\\dairyfarm\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\source\\repos\\dairyfarm\\migrations\\20241119062248_initialmig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -154,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -166,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "20241121113726_AddedOwner.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Migrations\\20241121113726_AddedOwner.cs",
               "RelativeDocumentMoniker": "Migrations\\20241121113726_AddedOwner.cs",
@@ -179,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CattleView.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Cattle\\CattleView.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Cattle\\CattleView.cshtml.cs",
@@ -192,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MilkProductionHandler.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Cattle\\MilkProductionHandler.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Cattle\\MilkProductionHandler.cshtml.cs",
@@ -205,20 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ByProduct.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\ByProduct.cs",
-              "RelativeDocumentMoniker": "Data\\Entity\\ByProduct.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\ByProduct.cs",
-              "RelativeToolTip": "Data\\Entity\\ByProduct.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T06:24:47.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
@@ -231,20 +218,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\DairyFarm\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCwAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T16:29:24.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\DairyFarm\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-18T12:12:39.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAiwKQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T10:13:48.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ByProduct.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\ByProduct.cs",
+              "RelativeDocumentMoniker": "Data\\Entity\\ByProduct.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\ByProduct.cs",
+              "RelativeToolTip": "Data\\Entity\\ByProduct.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T06:24:47.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "_FeedDetailsForm.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Cattle\\Partials\\_FeedDetailsForm.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\Partials\\_FeedDetailsForm.cshtml",
@@ -257,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "FeedingLog.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\FeedingLog.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\FeedingLog.cs",
@@ -270,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Expense.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\Expense.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\Expense.cs",
@@ -283,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Income.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\Income.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\Income.cs",
@@ -296,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "_CowDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Cattle\\Partials\\_CowDetails.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\Partials\\_CowDetails.cshtml",
@@ -309,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Food.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\Food.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\Food.cs",
@@ -326,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "FeedLogModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Model\\FeedLogModel.cs",
               "RelativeDocumentMoniker": "Model\\FeedLogModel.cs",
@@ -339,20 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T10:13:48.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -365,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "CattleView.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Cattle\\CattleView.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\CattleView.cshtml",
@@ -378,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "_CowStats.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Cattle\\Partials\\_CowStats.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\Partials\\_CowStats.cshtml",
@@ -391,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "_MilkProductionForm.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Cattle\\Partials\\_MilkProductionForm.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\Partials\\_MilkProductionForm.cshtml",
@@ -404,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "MilkProductionHandler.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Pages\\Cattle\\MilkProductionHandler.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\MilkProductionHandler.cshtml",
@@ -417,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "CowBreeding.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\CowBreeding.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\CowBreeding.cs",
@@ -430,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "MilkProduction.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Data\\Entity\\MilkProduction.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\MilkProduction.cs",
@@ -443,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "MilkProductionForm.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Model\\MilkProductionForm.cs",
               "RelativeDocumentMoniker": "Model\\MilkProductionForm.cs",
@@ -456,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Cattle.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\Model\\Cattle.cs",
               "RelativeDocumentMoniker": "Model\\Cattle.cs",
@@ -465,19 +478,6 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T08:48:55.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\DairyFarm\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\DairyFarm\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-18T12:12:39.837Z",
               "EditorCaption": ""
             },
             {
