@@ -20,6 +20,7 @@ namespace DairyFarm.Pages.Forms
         public void OnGet()
         {
             var Role = HttpContext.Session.GetString("UserRole");
+            Console.WriteLine(Role);
             if (Role != "Owner")
             {
                 Response.Redirect("/OwnerLogin");

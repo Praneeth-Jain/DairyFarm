@@ -3,7 +3,7 @@
 .vs/
 .vscode/
 
-./.vs/DairyFarm
+./.vs/
 
 # User-specific files for JetBrains Rider
 .idea/
@@ -11,6 +11,8 @@
 # Windows Installer files
 Thumbs.db
 ehthumbs.db
+
+obj
 
 # ASP.NET Core build output
 bin/

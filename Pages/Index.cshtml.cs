@@ -14,7 +14,7 @@ namespace DairyFarm.Pages
 
         public void OnGet()
         {
-            HttpContext.Session.SetInt32("OwnerID", 1);
+          
         }
     }
 }
