@@ -4,19 +4,18 @@ using DairyFarm.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace DairyFarm.Pages.Cattle
+namespace DairyFarm.Pages.Forms
 {
-    public class AddCattleModel : PageModel
+    public class ExpenseModel : PageModel
     {
         private readonly ApplicationDbContext _context;
 
-        public AddCattleModel(ApplicationDbContext context)
+        public ExpenseModel(ApplicationDbContext context)
         {
             _context = context;
         }
-
         [BindProperty]
-        public AddCattleClass Cow { get; set; }
+        public ExpenseClass exp {  get; set; }
         public void OnGet()
         {
             var Role = HttpContext.Session.GetString("UserRole");
@@ -25,29 +24,29 @@ namespace DairyFarm.Pages.Cattle
                 Response.Redirect("/OwnerLogin");
                 return;
             }
-
         }
 
         public IActionResult OnPost()
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return Page();
             }
             var OwnerId = (int)HttpContext.Session.GetInt32("Id");
-            
-            var newcattle = new Cows
+
+            var expense = new Expense
             {
                 OwnerId = OwnerId,
-                CowName = Cow.CowName,
-                DOB = Cow.DOB,
-                Breed = Cow.Breed,
-                HealthStatus = Cow.HealthStatus,
+                Category = exp.Category,
+                Amount = exp.Amount,
+                Date = exp.Date,
+
+
             };
-            _context.cows.Add(newcattle);
+            _context.expenses.Add(expense);
             _context.SaveChanges();
-            TempData["message"] = "Cow Details Added Successfully";
-            return RedirectToPage("/Cattle/CattleView");
+            TempData["message"] = "Expense Added Successfully";
+            return Page();
         }
     }
 }

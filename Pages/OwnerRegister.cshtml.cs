@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using DairyFarm.Data.DBContext;
 using DairyFarm.Data.Entity;
-using DairyFarm.Pages.Model;
+using DairyFarm.Model;
 
 namespace DairyFarm.Pages
 {

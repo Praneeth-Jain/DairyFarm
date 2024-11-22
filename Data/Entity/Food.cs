@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DairyFarm.Migrations;
+using System.ComponentModel.DataAnnotations;
 
 namespace DairyFarm.Data.Entity
 {
@@ -6,6 +7,9 @@ namespace DairyFarm.Data.Entity
     {
         [Key]
         public int FoodId { get; set; }
+
+        [Required]
+        public int OwnerId { get; set; }
 
         [Required]
         public string Name { get; set; }
