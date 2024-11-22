@@ -36,7 +36,7 @@ namespace DairyFarm.Pages
                 HttpContext.Session.SetString("UserRole", "Owner");
                 HttpContext.Session.SetInt32("Id", getOwner.OwnerId);
                 TempData["IsLoggedIn"] = "True";
-                return RedirectToPage("/Forms/Food");
+                return RedirectToPage("/Medical/AddRecords");
             }
             else
             {
