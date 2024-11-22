@@ -3,11 +3,20 @@
 @{
 }
 
+@{
+    if (TempData["Message"] != null)
+    {
+    <div class="alert-success">@TempData["Message"] </div>
+    }
+}
+
 <div>
     <h1>
         Food
     </h1>
 </div>
+
+
 
 
 

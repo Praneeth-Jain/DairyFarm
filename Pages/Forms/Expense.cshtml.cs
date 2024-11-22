@@ -45,8 +45,8 @@ namespace DairyFarm.Pages.Forms
             };
             _context.expenses.Add(expense);
             _context.SaveChanges();
-            TempData["message"] = "Expense Added Successfully";
-            return Page();
+            TempData["Message"] = "Expense Added Successfully";
+            return RedirectToPage();
         }
     }
 }

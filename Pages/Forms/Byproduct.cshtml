@@ -3,6 +3,17 @@
 @{
 }
 
+@{
+    if (TempData["Message"] != null)
+    {
+        <div class="alert-success">@TempData["Message"] </div>
+    }
+}
+
+<style>
+
+</style>
+
 <div>
     <h1>
         ByProduct Details
@@ -19,7 +30,7 @@
 
     <div class="form-group">
         <label asp-for="byprod.Type" class="control-label">Type :</label>
-        <input asp-for="byprod.Type" class=" form-control" placeholder="Enter ByProduct Type" />
+        <input asp-for="byprod.Type" class=" form-control" placeholder="Enter ByProduct Type (Ghee,Butter,etc)" />
         <span asp-validation-for="byprod.Type" class="text-danger"></span>
     </div>
     
@@ -30,7 +41,7 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="byprod.Revenue" class="control-label">Type :</label>
+        <label asp-for="byprod.Revenue" class="control-label">Amount :</label>
         <input asp-for="byprod.Revenue" class=" form-control" placeholder="Enter the Amount" />
         <span asp-validation-for="byprod.Revenue" class="text-danger"></span>
     </div>

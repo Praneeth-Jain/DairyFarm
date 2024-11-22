@@ -4,6 +4,7 @@ using DairyFarm.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks.Dataflow;
 
 namespace DairyFarm.Pages.Cattle
 {
@@ -24,7 +25,8 @@ namespace DairyFarm.Pages.Cattle
 
         public void OnGet()
         {
-            Cows = _context.cows.ToList();
+            var ownerId = HttpContext.Session.GetInt32("Id");
+            Cows = _context.cows.Where(c=>c.OwnerId==ownerId).ToList();
         }
 
         public async Task<IActionResult> OnGetCowDetailsAsync(int id)
@@ -33,16 +35,43 @@ namespace DairyFarm.Pages.Cattle
             {
                 return BadRequest("Invalid Cow ID.");
             }
-
             var cowDetails = await _context.cows
-                .Where(c => c.CowId == id)
-                .Select(c => new CowDetailsViewModel
-                {
-                    Name = c.CowName,
-                    Breed = c.Breed,
-                    DOB = c.DOB,
-                })
-                .FirstOrDefaultAsync();
+            .Where(cow => cow.CowId == id)
+            .Select(cow => new CowDetailsViewModel
+            {
+                Name = cow.CowName,
+                Breed = cow.Breed,
+                DOB = cow.DOB
+            })
+            .FirstOrDefaultAsync();
+
+            var milkData = await _context.milkProductions
+            .Where(milk => milk.CowId == id)
+            .GroupBy(milk => milk.CowId)
+            .Select(group => new
+            {
+                TotalMilkProduction = group.Sum(m => m.MilkYieldLitres),
+                TotalMilkIncome = group.Sum(m => m.MilkYieldLitres*30) 
+            })
+            .FirstOrDefaultAsync();
+
+            var expenseData = await _context.expenses
+            .Where(exp => exp.CowId == id)
+            .GroupBy(exp => exp.CowId)
+            .Select(group => new
+            {
+                TotalExpenses = group.Sum(e => e.Amount)
+            })
+            .FirstOrDefaultAsync();
+
+            if (cowDetails != null)
+            {
+                cowDetails.TotalMilkProduced = milkData?.TotalMilkProduction ?? 0;
+                cowDetails.MilkIncome = milkData?.TotalMilkIncome ?? 0;
+                cowDetails.FeedExpense = expenseData?.TotalExpenses ?? 0;
+            }
+
+
 
             if (cowDetails == null)
             {
@@ -82,8 +111,9 @@ namespace DairyFarm.Pages.Cattle
             {
                 return new JsonResult(new { success = false, message = "Invalid data." });
             }
-
-            var ownerID = (int)HttpContext.Session.GetInt32("OwnerID");
+            if (HttpContext.Session.GetInt32("Id") != null)
+            {
+            var ownerID = (int)HttpContext.Session.GetInt32("Id");
 
             var pricePerKg = _context.foods.Where(r => r.Name == FeedLog.FoodType).Select(r => r.PricePerUnit).FirstOrDefault();
             var totalPrice = pricePerKg * FeedLog.Quantity;
@@ -114,6 +144,11 @@ namespace DairyFarm.Pages.Cattle
 
             // Return a JSON response indicating success
             return new JsonResult(new { success = true });
+            }
+            else
+            {
+                return RedirectToPage("/Index");
+            }
         }
 
 

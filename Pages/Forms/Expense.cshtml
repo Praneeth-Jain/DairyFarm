@@ -2,6 +2,14 @@
 @model DairyFarm.Pages.Forms.ExpenseModel
 @{
 }
+@{
+    if (TempData["Message"] != null)
+    {
+        <div class="alert-success">@TempData["Message"] </div>
+    }
+}
+
+
 <div>
     <h1>
         Expense

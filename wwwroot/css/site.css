@@ -39,9 +39,9 @@ body {
 /* Left Container for Cow List */
 .cattleview-left {
     width: 25%; /* Reduced width to free space for the form */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /*background-color: #fff;*/
+   /* border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     padding: 20px;
     overflow-y: auto;
     max-height: 90vh;
@@ -88,9 +88,9 @@ body {
 .cattleview-right-upper {
     width: 100%; /* Allows it to dynamically adjust */
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /*background-color: #fff;*/
+/*    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     overflow: hidden;
      /* Adjusted height to give more space to the lower section */
 }
@@ -122,9 +122,9 @@ body {
 .cattleview-right-lower {
     flex-grow: 1; /* Allows it to take up the remaining space */
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /*background-color: #fff;*/
+  /*  border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -234,3 +234,5 @@ form button {
 .cattleview-milk-form {
     animation: fadeIn 0.5s ease-in-out;
 }
+
+

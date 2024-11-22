@@ -116,9 +116,22 @@
 <body>
     <div class="container">
         <div class="top-bar">
+            <div class="d-flex">
             <button class="toggle-btn" id="toggleNavBtn">☰</button>
+         
+            </div>
             <div>
                 <a href="/buy-premium" class="btn btn-success me-2">Buy Premium</a>
+                @{
+                    if (Context.Session.GetString("UserRole")=="Owner")
+                    {
+                        <a asp-page="/OwnerLogout" class="btn btn-success me-2">LogOut</a>
+                    }
+                    else
+                    {
+                        <a asp-page="/OwnerLogin" class="btn btn-success me-2">Login</a>
+                    }
+                    }
                 <a href="/profile" class="btn btn-outline-light">Profile</a>
             </div>
         </div>

@@ -44,8 +44,8 @@ namespace DairyFarm.Pages.Forms
             };
             _context.foods.Add(foods);
             _context.SaveChanges();
-            TempData["message"] = "Foods Added Successfully";
-            return Page();
+            TempData["Message"] = "Foods Added Successfully";
+            return RedirectToPage();
         }
     }
 }

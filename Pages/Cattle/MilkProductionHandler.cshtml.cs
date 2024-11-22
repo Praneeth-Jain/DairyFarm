@@ -41,7 +41,9 @@ namespace DairyFarm.Pages.Cattle
                 MilkYieldLitres = MilkProductionMod.Quantity
             };
 
-            var ownerID =(int) HttpContext.Session.GetInt32("OwnerID");
+            if (HttpContext.Session.GetInt32("Id") != null)
+            {
+                var ownerID = (int)HttpContext.Session.GetInt32("Id");
 
             var milkprice = 30;
 
@@ -61,6 +63,11 @@ namespace DairyFarm.Pages.Cattle
             TempData["MilkMsg"] = "Milk Production Record Added Succesfully";
 
             return new JsonResult(new { success = true, message = "Milk production record added successfully!" });
+            }
+            else
+            {
+                return RedirectToPage("/Index");
+            }
         }
     }
 }

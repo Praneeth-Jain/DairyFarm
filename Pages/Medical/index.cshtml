@@ -1,0 +1,172 @@
+﻿@page
+@model DairyFarm.Pages.Medical.IndexModel
+@{
+    var nearingDateColor = "red";   /* Date nearing color */
+    var doneDateColor = "gray";    /* Date passed color */
+    var normalDateColor = "green"; /* Normal date color */
+}
+
+<style>
+    /* General styles */
+   
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Form Section */
+    .form-section {
+        margin-bottom: 30px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .form-select {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-submit {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+
+    /* Cow Details Section */
+    .cow-summary {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .cow-name {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .cow-dob {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    /* Dates in Boxes */
+    .date-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .date-box {
+        width: calc(33.33% - 20px);
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .date-box:hover {
+            transform: scale(1.05);
+        }
+
+    .date-box-title {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .date-box-value {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 5px 15px;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+
+    .date-passed {
+        background-color:
+
+</style>
+
+<div class="container">
+    <h2 class="page-title">Cow Medical Details</h2>
+
+    <!-- Select Cow Form -->
+    <div class="form-section">
+        <form method="post" asp-page-handler="SelectCow" class="cow-selection-form">
+            <label for="selectedCow" class="form-label">Select Cow</label>
+            <select class="form-select" asp-for="selectedCow" id="selectedCow">
+                <option value="" selected>Select the cow</option>
+                @foreach(var cow in Model.cowlist)
+                {
+                    <option value="@cow.CowId">@cow.CowName</option>
+                }
+            </select>
+            <button type="submit" class="btn-submit">Select</button>
+        </form>
+    </div>
+
+    <!-- Cow Details Display -->
+    @if (Model.MedicalDetails != null)
+    {
+        <div class="cow-summary">
+            <h3 class="cow-name">@Model.MedicalDetails.Cowname</h3>
+            <p class="cow-dob">DOB: @Model.MedicalDetails.DOB.ToString("yyyy-MM-dd")</p>
+        </div>
+
+        <!-- Dates in Boxes -->
+        <div class="date-boxes">
+            <div class="date-box">
+                <h4 class="date-box-title">Last Calving Date</h4>
+                <p class="date-box-value">@Model.MedicalDetails.LastCalvingDate.ToString("yyyy-MM-dd")</p>
+                <span class="tag @Model.GetDateStatus(Model.MedicalDetails.LastCalvingDate)">@Model.GetDateStatusText(Model.MedicalDetails.LastCalvingDate)</span>
+            </div>
+
+            <div class="date-box">
+                <h4 class="date-box-title">Lactation End Date</h4>
+                <p class="date-box-value">@Model.MedicalDetails.LactationEndDate.ToString("yyyy-MM-dd")</p>
+                <span class="tag @Model.GetDateStatus(Model.MedicalDetails.LactationEndDate)">@Model.GetDateStatusText(Model.MedicalDetails.LactationEndDate)</span>
+            </div>
+
+            <div class="date-box">
+                <h4 class="date-box-title">Dry Days Start</h4>
+                <p class="date-box-value">@Model.MedicalDetails.DryDaysStart.ToString("yyyy-MM-dd")</p>
+                <span class="tag @Model.GetDateStatus(Model.MedicalDetails.DryDaysStart)">@Model.GetDateStatusText(Model.MedicalDetails.DryDaysStart)</span>
+            </div>
+
+            <div class="date-box">
+                <h4 class="date-box-title">Dry Days End</h4>
+                <p class="date-box-value">@Model.MedicalDetails.DryDaysEnd.ToString("yyyy-MM-dd")</p>
+                <span class="tag @Model.GetDateStatus(Model.MedicalDetails.DryDaysEnd)">@Model.GetDateStatusText(Model.MedicalDetails.DryDaysEnd)</span>
+            </div>
+
+            <div class="date-box">
+                <h4 class="date-box-title">Breeding Date</h4>
+                <p class="date-box-value">@Model.MedicalDetails.BreedingDate.ToString("yyyy-MM-dd")</p>
+                <span class="tag @Model.GetDateStatus(Model.MedicalDetails.BreedingDate)">@Model.GetDateStatusText(Model.MedicalDetails.BreedingDate)</span>
+            </div>
+
+            <div class="date-box">
+                <h4 class="date-box-title">Next Calving Date</h4>
+                <p class="date-box-value">@Model.MedicalDetails.NextCalvingDate.ToString("yyyy-MM-dd")</p>
+                <span class="tag @Model.GetDateStatus(Model.MedicalDetails.NextCalvingDate)">@Model.GetDateStatusText(Model.MedicalDetails.NextCalvingDate)</span>
+            </div>
+        </div>
+    }
+</div>

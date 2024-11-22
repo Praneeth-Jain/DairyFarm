@@ -58,8 +58,8 @@ namespace DairyFarm.Pages.Forms
             _context.incomes.Add(income);
             _context.byProduct.Add(byproduct);
             _context.SaveChanges();
-            TempData["message"] = "ByProduct Added Successfully";
-            return Page();
+            TempData["Message"] = "ByProduct Added Successfully";
+            return RedirectToPage();
         }
     }
 }
