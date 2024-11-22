@@ -2,21 +2,45 @@
 
 <div class="cattleview-milk-form">
     <h3>Add Milk Production</h3>
-    <form id="milk-form">
-        <input type="hidden" id="CowId" value="@Model.CowId" />
+    <form id="milk-form" method="post">
+        <input type="hidden" id="CowId" name="CowId" value="@Model.CowId" />
+
         <div>
             <label for="ProductionDate">Production Date</label>
             <input type="date" id="ProductionDate" name="ProductionDate" class="cattleview-input" value="@Model.ProductionDate.ToString("yyyy-MM-dd")" required />
         </div>
+
         <div>
             <label for="Quantity">Quantity (liters)</label>
-            <input type="number" id="Quantity" name="Quantity" class="cattleview-input" required />
+            <input type="text" id="Quantity" name="Quantity" class="cattleview-input" value="@Model.Quantity" required />
         </div>
-        <div>
-            <label for="Notes">Notes</label>
-            <textarea id="Notes" name="Notes" class="cattleview-input"></textarea>
-        </div>
+
         <button type="submit" class="cattleview-btn">Submit</button>
     </form>
 </div>
 
+<script>
+    $(document).on("submit", "#milk-form", function (e) {
+        e.preventDefault(); // Prevent default form submission to use AJAX
+
+        var formData = $(this).serialize(); // Serialize form data for submission
+
+        $.ajax({
+            url: '@Url.Page("/Cattle/MilkProductionHandler", new { handler = "SubmitMilk" })', // Page handler URL
+            type: 'POST',
+            data: formData, // Send form data as standard form data
+            success: function (response) {
+                $("#milk-form").empty()
+                $(".cattleview-milk-form").html('<p class="success-message">Milk production record added successfully!</p>');
+                window.location.href = "/Cattle/CattleView";
+                // Clear or update the form section as needed
+            },
+            error: function (xhr, status, error) {
+                $("#milk-form").empty()
+                $(".cattleview-milk-form").html('<p class="error-message">Failed to submit milk production. Please try again.</p>');
+                console.log(xhr.responseText); // Log any errors for debugging
+            }
+        });
+    });
+
+</script>

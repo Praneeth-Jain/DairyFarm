@@ -1,12 +1,18 @@
-﻿namespace DairyFarm.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DairyFarm.Model
 {
     public class MilkProductionModel
     {
-        public int MilkProductionId { get; set; } 
-        public int CowId { get; set; } 
-        public DateTime ProductionDate { get; set; } = DateTime.Now;
-        public decimal Quantity { get; set; } 
-        public string Notes { get; set; }
-    }
+        [Required(ErrorMessage = "Cow ID is required.")]
+        public int CowId { get; set; }
 
+        [Required(ErrorMessage = "Production Date is required.")]
+        public DateTime ProductionDate { get; set; } = DateTime.Now;
+
+        [Required(ErrorMessage = "Quantity is required.")]
+        [Range(0.1, double.MaxValue, ErrorMessage = "Quantity must be greater than 0.")]
+        public decimal Quantity { get; set; }
+
+    }
 }

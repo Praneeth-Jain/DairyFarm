@@ -16,6 +16,7 @@ namespace DairyFarm.Pages.Cattle
         [BindProperty]
         public FeedLogModel  FeedLog { get; set; }
 
+
         public CattleViewModel(ApplicationDbContext context)
         {
             _context = context;
@@ -53,11 +54,7 @@ namespace DairyFarm.Pages.Cattle
         }
 
 
-        public IActionResult OnGetMilkProductionForm(int cowId)
-        {
-            var model = new MilkProductionModel { CowId = cowId };
-            return Partial("Partials/_MilkProductionForm", model);
-        }
+        
 
         public IActionResult OnGetFeedForm(int cowId)
         {
@@ -66,9 +63,13 @@ namespace DairyFarm.Pages.Cattle
                 return BadRequest("Invalid Cow ID.");
             }
 
+            var foodtypes = _context.foods.Select(f => new FoodNameViewModel { Name= f.Name,PricePerKg= f.PricePerUnit }).ToList();
+
+
             var model = new FeedLogModel
             {
-                CowId = cowId
+                CowId = cowId,
+                FoodNames=foodtypes
             };
 
             return Partial("Partials/_FeedDetailsForm", model);
@@ -77,22 +78,38 @@ namespace DairyFarm.Pages.Cattle
 
         public IActionResult OnPostAddFeed()
         {
-            if (!ModelState.IsValid)
+            if (!TryValidateModel(FeedLog))
             {
                 return new JsonResult(new { success = false, message = "Invalid data." });
             }
 
+            var ownerID = (int)HttpContext.Session.GetInt32("OwnerID");
+
+            var pricePerKg = _context.foods.Where(r => r.Name == FeedLog.FoodType).Select(r => r.PricePerUnit).FirstOrDefault();
+            var totalPrice = pricePerKg * FeedLog.Quantity;
             var feeds = new FeedingLog
             {
                 CowId = FeedLog.CowId,
                 Date = FeedLog.FeedDate,
                 FoodName = FeedLog.FoodType,
                 QuantityKG = FeedLog.Quantity,
-                TotalCost = 500
+                TotalCost = totalPrice
             };
+            var expensevar = new Expense
+            {
+                CowId = FeedLog.CowId,
+                Amount = totalPrice,
+                Category = "Feed",
+                Date = FeedLog.FeedDate,
+                OwnerId = ownerID
+            };
+
+
 
             
             _context.feedinglogs.Add(feeds);
+            _context.expenses.Add(expensevar);
+
             _context.SaveChanges();
 
             // Return a JSON response indicating success
@@ -100,26 +117,9 @@ namespace DairyFarm.Pages.Cattle
         }
 
 
-        public async Task<IActionResult> OnPostSubmitMilkAsync([FromBody] MilkProductionModel model)
-        {
-            Console.WriteLine(ModelState);
-            if (!ModelState.IsValid) return BadRequest("Invalid milk production data.");
-
-            var milkProduction = new MilkProduction
-            {
-                CowId = model.CowId,
-                Date = model.ProductionDate,
-                MilkYieldLitres = model.Quantity,
-            };
-
-            _context.milkProductions.Add(milkProduction);
-            await _context.SaveChangesAsync();
-            return new JsonResult("Milk production added successfully.");
-        }
-
-
+       
 
     }
-    }
+}
 
 

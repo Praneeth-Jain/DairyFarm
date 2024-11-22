@@ -19,6 +19,7 @@ namespace DairyFarm
             }
           );
 
+
             builder.Services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -40,6 +41,8 @@ namespace DairyFarm
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthorization();
 

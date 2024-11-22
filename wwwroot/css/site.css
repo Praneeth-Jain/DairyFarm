@@ -1,243 +1,236 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
-}
-
-
-/* Page Layout */
-.cow-view-container {
-    display: flex;
-    flex-wrap: wrap; /* Enables responsiveness */
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Left Navigation */
-.cow-view-left-nav {
-    flex: 1 1 20%;
-    max-width: 300px;
-    background-color: #ffffff; /* White card-like look */
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-    .cow-view-left-nav h3 {
-        color: #27ae60; /* Green accent */
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-#cow-list {
-    list-style: none;
-}
-
-.cow-item {
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #27ae60;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background 0.3s ease;
-}
-
-    .cow-item:hover {
-        background-color: #219150; /* Slightly darker green on hover */
-    }
-
-/* Right Section */
-.cow-view-right-section {
-    flex: 3 1 75%;
-    max-width: calc(75% - 20px);
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.actions {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.action-btn {
-    flex: 1;
-    margin: 0 5px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #27ae60;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-    .action-btn:hover {
-        background-color: #219150;
-    }
-
-.dynamic-content {
-    padding: 10px;
-    background-color: #f9fdf9;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
-}
-
-/* Cow Details & Stats */
-.cow-details, .cow-stats {
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-}
-
-    .cow-details h3, .cow-stats h3 {
-        color: #27ae60;
-        margin-bottom: 10px;
-    }
-
-/* Modal */
-#modal-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-    #modal-container form {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 400px;
-        width: 90%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-.cow-view-container form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
     color: #333;
 }
 
-.cow-view-container form input, form button {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    font-size: 14px;
+/* General Focus Styling */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-.cow-view-container form input:focus {
-    outline: none;
-    border-color: #27ae60;
-}
-
-.cow-view-container form button {
-    background-color: #27ae60;
-    color: #ffffff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-    .cow-view-container form button:hover {
-        background-color: #219150;
-    }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .cow-view-container {
-        flex-direction: column;
-    }
-
-    .cow-view-left-nav {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .cow-view-right-section {
-        max-width: 100%;
-    }
-
-    .actions {
-        flex-direction: column;
-    }
-
-    .action-btn {
-        margin: 5px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .cow-item {
-        font-size: 14px;
-    }
-
-    .action-btn {
-        font-size: 14px;
-    }
-}
-
-.cattleview-cow-details, .cattleview-feed-form, .cattleview-milk-form {
-    background-color: #ffffff;
+/* Cattleview Container */
+.cattleview-container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
     padding: 20px;
-    margin: 10px 0;
+    gap: 20px; /* Adds spacing between sections */
+}
+
+/* Left Container for Cow List */
+.cattleview-left {
+    width: 25%; /* Reduced width to free space for the form */
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 90vh;
+    height: 100%;
 }
 
-.cattleview-input {
+.cattleview-cow-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .cattleview-cow-list li {
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+
+.cattleview-cow-item {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px;
+    border: 2px solid #e2e2e2;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.cattleview-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
-    .cattleview-btn:hover {
+    .cattleview-cow-item:hover {
+        transform: translateY(-5px);
+        background-color: #f1f8f6;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Active Cow Styling */
+    .cattleview-cow-item.active {
+        border-color: #4caf50;
+        background-color: #f1f8f6;
+    }
+
+/* Right Upper Section (Cow Details) */
+.cattleview-right-upper {
+    width: 100%; /* Allows it to dynamically adjust */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+     /* Adjusted height to give more space to the lower section */
+}
+.cattleview-cow-details {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .cattleview-cow-details h2 {
+        font-size: 24px;
+        color: #4caf50;
+        margin-bottom: 15px;
+    }
+
+    .cattleview-cow-details ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cattleview-cow-details li {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+/* Right Lower Section (Forms) */
+.cattleview-right-lower {
+    flex-grow: 1; /* Allows it to take up the remaining space */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%; /* Increased width to occupy more space */
+}
+
+/* Action Buttons */
+.cattleview-action-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 70%;
+    margin-top:20px;
+    margin-left:30px;
+}
+
+    .cattleview-action-btn:hover {
+        background-color: #45a049;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+/* Form Styling */
+.feed-form,
+.cattleview-milk-form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensures the form takes the full width of its parent */
+    transition: all 0.3s ease;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+    form input:focus,
+    form textarea:focus {
+        border-color: #4caf50;
+        outline: none;
+    }
+
+form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    form button:hover {
         background-color: #45a049;
     }
+
+/* Success/Error Messages */
+.success-message,
+.error-message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+/* Scrollable Cow List */
+.cattleview-left {
+    overflow-y: auto;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.cattleview-right-upper,
+.feed-form,
+.cattleview-milk-form {
+    animation: fadeIn 0.5s ease-in-out;
+}

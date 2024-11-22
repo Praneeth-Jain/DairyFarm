@@ -1,4 +1,4 @@
-﻿using DairyFarm.Migrations;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace DairyFarm.Data.Entity
