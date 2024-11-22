@@ -67,6 +67,9 @@ global.json
 # ASP.NET Core specific config files
 appsettings.json
 appsettings.Development.json
+<<<<<<< HEAD
 
 
 Pages/Shared/_Layout.cshtml
+=======
+>>>>>>> origin/CowView

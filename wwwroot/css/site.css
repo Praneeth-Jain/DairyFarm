@@ -20,3 +20,224 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+/* Page Layout */
+.cow-view-container {
+    display: flex;
+    flex-wrap: wrap; /* Enables responsiveness */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Navigation */
+.cow-view-left-nav {
+    flex: 1 1 20%;
+    max-width: 300px;
+    background-color: #ffffff; /* White card-like look */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .cow-view-left-nav h3 {
+        color: #27ae60; /* Green accent */
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+#cow-list {
+    list-style: none;
+}
+
+.cow-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #27ae60;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+    .cow-item:hover {
+        background-color: #219150; /* Slightly darker green on hover */
+    }
+
+/* Right Section */
+.cow-view-right-section {
+    flex: 3 1 75%;
+    max-width: calc(75% - 20px);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .action-btn:hover {
+        background-color: #219150;
+    }
+
+.dynamic-content {
+    padding: 10px;
+    background-color: #f9fdf9;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Cow Details & Stats */
+.cow-details, .cow-stats {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+    .cow-details h3, .cow-stats h3 {
+        color: #27ae60;
+        margin-bottom: 10px;
+    }
+
+/* Modal */
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+    #modal-container form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+.cow-view-container form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cow-view-container form input, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.cow-view-container form input:focus {
+    outline: none;
+    border-color: #27ae60;
+}
+
+.cow-view-container form button {
+    background-color: #27ae60;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .cow-view-container form button:hover {
+        background-color: #219150;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cow-view-container {
+        flex-direction: column;
+    }
+
+    .cow-view-left-nav {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cow-view-right-section {
+        max-width: 100%;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cow-item {
+        font-size: 14px;
+    }
+
+    .action-btn {
+        font-size: 14px;
+    }
+}
+
+.cattleview-cow-details, .cattleview-feed-form, .cattleview-milk-form {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cattleview-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cattleview-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .cattleview-btn:hover {
+        background-color: #45a049;
+    }

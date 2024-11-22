@@ -3,12 +3,118 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DairyFarm</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/DairyFarm.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Dairy Management</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
+    <script src]></script>
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .top-bar {
+            background-color: #4CAF50;
+            color: white;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .left-nav {
+            background-color: #FFFFFF;
+            color: #333;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            transition: left 0.3s ease-in-out;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+            .left-nav.active {
+                left: 0;
+            }
+
+        .nav-link {
+            color: #4CAF50;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+            .nav-link:hover {
+                color: #155d27;
+                background-color: #f1f1f1;
+            }
+
+        .content {
+            margin-left: 0;
+            padding: 20px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+            .content.shift {
+                margin-left: 250px;
+            }
+
+        .section-header {
+            color: #4CAF50;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-success {
+            background-color: #4CAF50;
+            border: none;
+        }
+
+            .btn-success:hover {
+                background-color: #43A047;
+            }
+
+        .btn-outline-light {
+            border-color: white;
+            color: white;
+        }
+
+            .btn-outline-light:hover {
+                background-color: white;
+                color: #4CAF50;
+            }
+    </style>
 </head>
 <body>
+<<<<<<< HEAD
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -31,22 +137,68 @@
             </div>
         </nav>
     </header>
+=======
+>>>>>>> origin/CowView
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        <div class="top-bar">
+            <button class="toggle-btn" id="toggleNavBtn">☰</button>
+            <div>
+                <a href="/buy-premium" class="btn btn-success me-2">Buy Premium</a>
+                <a href="/profile" class="btn btn-outline-light">Profile</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Side Navigation -->
+            <nav class="left-nav col-3" id="sideNav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Index">DairyFarm</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#submenu1">Cattle</a>
+                        <div class="collapse" id="submenu1">
+                            <ul class="nav flex-column ms-3">
+                                <li><a class="nav-link" asp-page="/Cattle/AddCattle">Add Cattle</a></li>
+                                <li><a class="nav-link" asp-page="/Cattle/CattleView">All Cattle</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#submenu2">Feed Management</a>
+                        <div class="collapse" id="submenu2">
+                            <ul class="nav flex-column ms-3">
+                                <li><a class="nav-link" href="#">Add Feed</a></li>
+                                <li><a class="nav-link" href="#">Edit Existing Feed</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="content col-9" id="mainContent">
+                @RenderBody()
+            </div>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - DairyFarm - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            const toggleNavBtn = document.getElementById('toggleNavBtn');
+            const sideNav = document.getElementById('sideNav');
+            const mainContent = document.getElementById('mainContent');
 
-    @await RenderSectionAsync("Scripts", required: false)
+            toggleNavBtn.addEventListener('click', () => {
+                sideNav.classList.toggle('active');
+                mainContent.classList.toggle('shift');
+            });
+        })();
+    </script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
