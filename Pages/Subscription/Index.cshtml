@@ -1,0 +1,216 @@
+﻿@page
+@model DairyFarm.Pages.Subscription.IndexModel
+@{
+}
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c7a7b;
+        margin-bottom: 2rem;
+    }
+
+    .subscription-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+    }
+
+        .subscription-table th, .subscription-table td {
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid #ddd;
+        }
+
+        .subscription-table th {
+            background-color: #ebf8ff;
+            color: #2c7a7b;
+            font-size: 1.1rem;
+        }
+
+        .subscription-table tbody tr:hover {
+            background-color: #e6fffa;
+        }
+
+        .subscription-table td {
+            font-size: 1rem;
+        }
+
+    .highlight-column {
+        background-color: rgba(46, 204, 113, 0.1);
+        border: 2px solid #2ecc71;
+    }
+
+    .feature-name {
+        text-align: left;
+        font-weight: bold;
+        color: #4a5568;
+    }
+
+    .price-button {
+        display: block;
+        margin: 1rem auto 0;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        background-color: #1e88e5;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        text-align: center;
+    }
+
+        .price-button:hover {
+            background-color: #1565c0;
+            transform: scale(1.05);
+        }
+
+        .price-button:focus {
+            outline: none;
+            box-shadow: 0 0 8px #1e88e5;
+        }
+</style>
+
+<div class="container">
+    <h1>Choose Your Subscription Plan</h1>
+    <table class="subscription-table">
+        <thead>
+            <tr>
+                <th>Features</th>
+                <th>Free Tier</th>
+                <th>Standard Tier</th>
+                <th>Premium Tier</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="feature-name">Cow Management</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Feed Management</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Financial Reports</td>
+                <td>Limited</td>
+                <td>General</td>
+                <td>Detailed</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Medical Records</td>
+                <td>Not Available</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Notification System</td>
+                <td>Not Available</td>
+                <td>Not Available</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Cow Limit</td>
+                <td>Up to 5</td>
+                <td>Up to 50</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="price-button" data-tier="free" data-bs-target="#confirmationModal">Free Tier - Active</button>
+                </td>
+                <td>
+                    <button class="price-button" data-tier="standard" data-bs-toggle="modal" data-bs-target="#confirmationModal">₹499 - Buy Standard Tier</button>
+                </td>
+                <td>
+                    <button class="price-button" data-tier="premium" data-bs-toggle="modal" data-bs-target="#confirmationModal">₹999 - Buy Premium Tier</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form id="subscription-form" method="post" asp-page-handler="Subscribe">
+        <input type="hidden" id="selected-tier" name="SelectedTier" value="">
+    </form>
+</div>
+
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">Confirm Your Subscription</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to subscribe to the <strong id="modal-tier-name"></strong>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="confirm-subscription">Yes, Proceed</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let selectedTier = ""; 
+
+    $(document).ready(function () {
+    
+        $(".price-button").hover(
+            function () {
+                const columnIndex = $(this).data("tier") === "free" ? 1 : $(this).data("tier") === "standard" ? 2 : 3;
+                $("table.subscription-table tr").each(function () {
+                    $(this).find(`td:nth-child(${columnIndex + 1}), th:nth-child(${columnIndex + 1})`).addClass("highlight-column");
+                });
+            },
+            function () {
+                $(".highlight-column").removeClass("highlight-column");
+            }
+        );
+
+        $(".price-button").on("click", function () {
+            selectedTier = $(this).data("tier");
+            const columnIndex = selectedTier === "free" ? 1 : selectedTier === "standard" ? 2 : 3;
+
+            $("table.subscription-table tr").each(function () {
+                $(this).find(`td:nth-child(${columnIndex + 1}), th:nth-child(${columnIndex + 1})`).addClass("highlight-column");
+            });
+
+            const tierName = selectedTier.charAt(0).toUpperCase() + selectedTier.slice(1) + " Tier";
+            $("#modal-tier-name").text(tierName);
+        });
+
+        $("#confirm-subscription").on("click", function () {
+            $("#selected-tier").val(selectedTier);
+            $("#subscription-form").submit();
+        });
+    });
+</script>

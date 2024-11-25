@@ -51,7 +51,7 @@ namespace DairyFarm.Pages.Medical
                 LactationEndDate = add.LastCalvingDate.AddMonths(10),
                 DryDaysStart = add.LastCalvingDate.AddMonths(10),
                 DryDaysEnd = add.LastCalvingDate.AddMonths(11),
-                NextCalvingDate = add.LastCalvingDate.AddDays(12),
+                NextCalvingDate = add.LastCalvingDate.AddMonths(12),
             };
             _context.cowBreedings.Add(input);
             _context.SaveChanges();
