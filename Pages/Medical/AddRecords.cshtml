@@ -1,0 +1,42 @@
+﻿@page
+@model DairyFarm.Pages.Medical.AddRecordsModel
+@{
+}
+
+<div>
+    <h1>
+        Add Medical Records
+    </h1>
+</div>
+
+<form  method="post">
+    <div>
+        <label asp-for="add.CowId" class="control-label">Select Cattle:</label>
+        <select asp-for="add.CowId" class="form-select mt-1 mb-2">
+            <option selected disabled>Select Cattle</option>
+            @foreach (var cow in Model.CattleList)
+            {
+                <option value="@cow.CowId">@cow.CowName</option>
+            }
+        </select>
+        <span asp-validation-for="add.CowId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="add.LastCalvingDate" class="control-label">Last Calving Date :</label>
+        <input type="date" asp-for="add.LastCalvingDate" class=" form-control" placeholder="Enter the Last Calving Date" />
+        <span asp-validation-for="add.LastCalvingDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="add.BreedingDate" class="control-label">Cattle Breeding Date :(Optional)</label>
+        <input type="date" asp-for="add.BreedingDate" class=" form-control" placeholder="Enter the Breeding Date" />
+        <span asp-validation-for="add.BreedingDate" class="text-danger"></span>
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-dark btn-lg" style="background-color: #28a745; border-color: #28a745;">Done</button>
+    </div>
+    
+
+</form>
