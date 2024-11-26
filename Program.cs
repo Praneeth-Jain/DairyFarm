@@ -34,15 +34,15 @@ namespace DairyFarm
                 options.AddPolicy("FreeTier", policy =>
                     policy.RequireAssertion(context =>
                         context.User.HasClaim(c => c.Type == "SubscriptionType" &&
-                                                    (c.Value == "Free" || c.Value == "Standard" || c.Value == "Premium"))));
+                                                    (c.Value == "free" || c.Value == "standard" || c.Value == "premium"))));
 
                 options.AddPolicy("StandardTier", policy =>
                     policy.RequireAssertion(context =>
                         context.User.HasClaim(c => c.Type == "SubscriptionType" &&
-                                                    (c.Value == "Standard" || c.Value == "Premium"))));
+                                                    (c.Value == "standard" || c.Value == "premium"))));
 
                 options.AddPolicy("PremiumTier", policy =>
-                    policy.RequireClaim("SubscriptionType", "Premium"));
+                    policy.RequireClaim("SubscriptionType", "premium"));
             });
 
 

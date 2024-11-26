@@ -1,11 +1,13 @@
 using DairyFarm.Data.DBContext;
 using DairyFarm.Data.Entity;
 using DairyFarm.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DairyFarm.Pages.Forms
 {
+    [Authorize(Policy = "FreeTier")]
     public class FoodModel : PageModel
     {
         private readonly ApplicationDbContext _context;
@@ -19,13 +21,7 @@ namespace DairyFarm.Pages.Forms
 
         public void OnGet()
         {
-            var Role = HttpContext.Session.GetString("UserRole");
-            Console.WriteLine(Role);
-            if (Role != "Owner")
-            {
-                Response.Redirect("/OwnerLogin");
-                return;
-            }
+           
         }
 
         public IActionResult OnPost()

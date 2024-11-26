@@ -1,11 +1,13 @@
 using DairyFarm.Data.DBContext;
 using DairyFarm.Data.Entity;
 using DairyFarm.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DairyFarm.Pages.Forms
 {
+    [Authorize(Policy = "StandardTier")]
     public class ExpenseModel : PageModel
     {
         private readonly ApplicationDbContext _context;
@@ -18,12 +20,7 @@ namespace DairyFarm.Pages.Forms
         public ExpenseClass exp {  get; set; }
         public void OnGet()
         {
-            var Role = HttpContext.Session.GetString("UserRole");
-            if (Role != "Owner")
-            {
-                Response.Redirect("/OwnerLogin");
-                return;
-            }
+          
         }
 
         public IActionResult OnPost()

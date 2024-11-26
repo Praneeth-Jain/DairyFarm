@@ -1,7 +1,10 @@
 using DairyFarm.Data.DBContext;
 using DairyFarm.Model;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Security.Claims;
 
 namespace DairyFarm.Pages
 {
@@ -33,9 +36,28 @@ namespace DairyFarm.Pages
 
             if (getOwner != null)
             {
-                HttpContext.Session.SetString("UserRole", "Owner");
+                var tierUser=_context.subscriptions.Where(o=>o.OwnerId==getOwner.OwnerId).FirstOrDefault();
+                var tier = tierUser.Tier;
+
+                var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, getOwner.OwnerId.ToString()),
+        new Claim("SubscriptionType", tier) 
+    };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var authProperties = new AuthenticationProperties
+                {
+                    IsPersistent = false
+                };
+
+               HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    authProperties);
+
                 HttpContext.Session.SetInt32("Id", getOwner.OwnerId);
-                TempData["IsLoggedIn"] = "True";
 
                 return RedirectToPage("/Cattle/CattleView");
 

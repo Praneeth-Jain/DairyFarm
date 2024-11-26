@@ -121,7 +121,7 @@
             <div>
                 <a asp-page="Subscription/Index" class="btn btn-success me-2">Buy Premium</a>
                 @{
-                    if (Context.Session.GetString("UserRole")=="Owner")
+                    @if (User.Identity.IsAuthenticated)
                     {
                         <a asp-page="/OwnerLogout" class="btn btn-success me-2">LogOut</a>
                     }

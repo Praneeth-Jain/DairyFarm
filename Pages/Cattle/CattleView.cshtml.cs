@@ -1,6 +1,7 @@
 using DairyFarm.Data.DBContext;
 using DairyFarm.Data.Entity;
 using DairyFarm.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using System.Threading.Tasks.Dataflow;
 
 namespace DairyFarm.Pages.Cattle
 {
+    [Authorize(Policy ="FreeTier")]
     public class CattleViewModel : PageModel
     {
         private readonly ApplicationDbContext _context;

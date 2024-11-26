@@ -17,12 +17,7 @@ namespace DairyFarm.Pages.Subscription
         public void OnGet()
         {
             
-            var userRole = HttpContext.Session.GetString("UserRole");
-            if(userRole != "Owner")
-            {
-                Response.Redirect("/OwnerLogin");
-                return;
-            }
+          
         }
 
         public IActionResult OnPostSubscribe(string selectedTier) {
@@ -33,7 +28,7 @@ namespace DairyFarm.Pages.Subscription
                 var endday= today.AddYears(1);
                 var status = "Active";
 
-                var User=_context.subscriptions.Find(userId);
+                var User=_context.subscriptions.Where(s=>s.OwnerId==userId).FirstOrDefault();
                 if (User != null)
                 {
                     var existing_tier = User.Tier;

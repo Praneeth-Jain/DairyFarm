@@ -3,9 +3,11 @@ using DairyFarm.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using DairyFarm.Data.Entity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DairyFarm.Pages.Forms
 {
+    [Authorize(Policy = "StandardTier")]
     public class ByproductModel : PageModel
     {
 
@@ -21,12 +23,7 @@ namespace DairyFarm.Pages.Forms
         public ByproductClass byprod {  get; set; }
         public void OnGet()
         {
-            var Role = HttpContext.Session.GetString("UserRole");
-            if (Role != "Owner")
-            {
-                Response.Redirect("/OwnerLogin");
-                return;
-            }
+          
 
         }
 

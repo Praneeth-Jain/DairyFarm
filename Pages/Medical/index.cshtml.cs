@@ -1,11 +1,13 @@
 using DairyFarm.Data.DBContext;
 using DairyFarm.Data.Entity;
 using DairyFarm.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DairyFarm.Pages.Medical
 {
+    [Authorize(Policy = "PremiumTier")]
     public class IndexModel : PageModel
     {
         public MedicalViewModel MedicalDetails { get; set; }
@@ -22,15 +24,11 @@ namespace DairyFarm.Pages.Medical
 
         public void OnGet()
         {
-            var role = HttpContext.Session.GetString("UserRole");
-            if (role != "Owner")
+            if (HttpContext.Session.IsAvailable)
             {
-                Response.Redirect("/OwnerLogin");
-                return;
-            }
-
             var id = (int)HttpContext.Session.GetInt32("Id");
             cowlist = _context.cows.Where(c => c.OwnerId == id).ToList();
+            }
         }
 
         public void OnPostSelectCow()

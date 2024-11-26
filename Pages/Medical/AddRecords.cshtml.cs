@@ -1,12 +1,14 @@
 using DairyFarm.Data.DBContext;
 using DairyFarm.Data.Entity;
 using DairyFarm.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace DairyFarm.Pages.Medical
 {
+    [Authorize(Policy = "PremiumTier")]
     public class AddRecordsModel : PageModel
     {
         private readonly ApplicationDbContext _context;
@@ -23,12 +25,7 @@ namespace DairyFarm.Pages.Medical
         public void OnGet()
         {
 
-            var Role = HttpContext.Session.GetString("UserRole");
-            if (Role != "Owner")
-            {
-                Response.Redirect("/OwnerLogin");
-                return;
-            }
+            
             CattleList = _context.cows.ToList();
         }
 

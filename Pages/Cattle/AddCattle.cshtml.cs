@@ -1,11 +1,14 @@
 using DairyFarm.Data.DBContext;
 using DairyFarm.Data.Entity;
 using DairyFarm.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DairyFarm.Pages.Cattle
 {
+
+    [Authorize(Policy ="FreeTier")]
     public class AddCattleModel : PageModel
     {
         private readonly ApplicationDbContext _context;
@@ -19,12 +22,7 @@ namespace DairyFarm.Pages.Cattle
         public AddCattleClass Cow { get; set; }
         public void OnGet()
         {
-            var Role = HttpContext.Session.GetString("UserRole");
-            if (Role != "Owner")
-            {
-                Response.Redirect("/OwnerLogin");
-                return;
-            }
+            
 
         }
 
