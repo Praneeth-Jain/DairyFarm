@@ -94,6 +94,17 @@
 </style>
 
 <div class="container">
+    
+        
+        
+            @if (TempData["SubMessage"] != null){
+            <div class="d-flex justify-content-center align-content-center">
+                <div class="alert bg-danger text-center text-light rounded w-50">@TempData["SubMessage"]</div>
+            </div>
+        }
+        
+        
+    
     <h1>Choose Your Subscription Plan</h1>
     <table class="subscription-table">
         <thead>

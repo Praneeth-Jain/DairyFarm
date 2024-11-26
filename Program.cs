@@ -1,4 +1,5 @@
 using DairyFarm.Data.DBContext;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace DairyFarm
@@ -9,7 +10,6 @@ namespace DairyFarm
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             builder.Services.AddRazorPages();
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -18,6 +18,33 @@ namespace DairyFarm
                 options.UseSqlServer(ConnectionString);
             }
           );
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/OwnerLogin"; 
+                    options.AccessDeniedPath = "/Subscription/Index";
+                    options.LogoutPath = "/OwnerLogout";
+                });
+
+
+
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("FreeTier", policy =>
+                    policy.RequireAssertion(context =>
+                        context.User.HasClaim(c => c.Type == "SubscriptionType" &&
+                                                    (c.Value == "Free" || c.Value == "Standard" || c.Value == "Premium"))));
+
+                options.AddPolicy("StandardTier", policy =>
+                    policy.RequireAssertion(context =>
+                        context.User.HasClaim(c => c.Type == "SubscriptionType" &&
+                                                    (c.Value == "Standard" || c.Value == "Premium"))));
+
+                options.AddPolicy("PremiumTier", policy =>
+                    policy.RequireClaim("SubscriptionType", "Premium"));
+            });
+
 
 
             builder.Services.AddSession(options =>
@@ -43,6 +70,8 @@ namespace DairyFarm
             app.UseRouting();
 
             app.UseSession();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

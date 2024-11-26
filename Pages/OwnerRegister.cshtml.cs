@@ -36,7 +36,20 @@ namespace DairyFarm.Pages
                 OwnerPassword = reg.OwnerPassword,
 
             };
+
             _context.owners.Add(newowner);
+            _context.SaveChanges();
+
+            var thisUser=_context.owners.Where(x=>x.OwnerEmail == reg.OwnerEmail).FirstOrDefault();
+            var freesubs = new Subscriptions
+            {
+                OwnerId = thisUser.OwnerId,
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now.AddYears(3),
+                Status = "Active",
+                Tier = "free"
+            };
+            _context.subscriptions.Add(freesubs);
             _context.SaveChanges();
             return RedirectToPage("OwnerLogin");
         }
