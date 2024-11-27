@@ -1,0 +1,29 @@
+﻿@model (List<Data.Entity.MenuItems> MenuItems, List<Data.Entity.SubMenuItems> SubMenuItems)
+
+<ul class="nav flex-column">
+    <li class="nav-item">
+        <a class="nav-link" asp-page="/Index">DairyFarm</a>
+    </li>
+    <hr>
+    @foreach (var menuItem in Model.MenuItems)
+    {
+        var menuSubItems = Model.SubMenuItems.Where(sub => sub.MenuItemId == menuItem.Id).ToList();
+        var submenuId = "submenu" + menuItem.Id;
+
+        <li class="nav-item">
+
+            <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#@submenuId">@menuItem.Title</a>
+            <div class="collapse" id="@submenuId">
+                <ul class="nav flex-column ms-3">
+
+                    @foreach (var subMenuItem in menuSubItems)
+                    {
+                        <li>
+                            <a class="nav-link" asp-page="@subMenuItem.Url">@subMenuItem.Title</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </li>
+    }
+</ul>

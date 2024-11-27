@@ -20,5 +20,9 @@ namespace DairyFarm.Data.DBContext
         public DbSet<Owners> owners { get; set; }
 
         public DbSet<Subscriptions> subscriptions { get; set; } 
+
+        public DbSet<MenuItems> menuItems { get; set; }
+
+        public DbSet<SubMenuItems> subMenuItems { get; set; }
     }
 }
