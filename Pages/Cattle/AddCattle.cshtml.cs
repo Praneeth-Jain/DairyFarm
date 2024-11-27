@@ -33,6 +33,29 @@ namespace DairyFarm.Pages.Cattle
                 return Page();
             }
             var OwnerId = (int)HttpContext.Session.GetInt32("Id");
+
+            var cowCount=_context.cows.Count(x=>x.OwnerId == OwnerId);
+            var cowlimit = 0;
+            var tier = User.FindFirst("SubscriptionType").Value;
+            if (tier != null)
+            {
+                if (tier == "free")
+                {
+                    cowlimit = 5;
+                }
+                else if(tier == "standard")
+                {
+                    cowlimit = 20;
+                }
+                else
+                {
+                    cowlimit=int.MaxValue;
+                }
+                if (cowCount >= cowlimit) {
+                    
+                    return RedirectToPage("/Subscription/Index");
+                }
+            }
             
             var newcattle = new Cows
             {

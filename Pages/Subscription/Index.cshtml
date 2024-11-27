@@ -91,6 +91,43 @@
             outline: none;
             box-shadow: 0 0 8px #1e88e5;
         }
+
+   
+    .disable-ui {
+        cursor: not-allowed;
+        background-color: #ccc;
+        color: #888;
+        border: 1px solid #bbb;
+        display: block;
+        margin: 1rem auto 0;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        text-align: center;
+    }
+
+    .active-tier-info {
+        background-color: #2c7a7b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+        .active-tier-info .active-tier-text {
+            font-weight: bold;
+        }
+
+        .active-tier-info strong {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+
 </style>
 
 <div class="container">
@@ -102,8 +139,18 @@
                 <div class="alert bg-danger text-center text-light rounded w-50">@TempData["SubMessage"]</div>
             </div>
         }
-        
-        
+
+
+    <div class="active-tier-info">
+        @if (!string.IsNullOrEmpty(Model.CurrentSubscription))
+        {
+            <p class="active-tier-text">Your Active Subscription: <strong>@Model.CurrentSubscription.ToUpper()</strong></p>
+        }
+        else
+        {
+            <p class="active-tier-text">You don't have an active subscription yet. Please choose one below.</p>
+        }
+    </div>
     
     <h1>Choose Your Subscription Plan</h1>
     <table class="subscription-table">
@@ -149,21 +196,52 @@
             <tr>
                 <td class="feature-name">Cow Limit</td>
                 <td>Up to 5</td>
-                <td>Up to 50</td>
+                <td>Up to 20</td>
                 <td>Unlimited</td>
             </tr>
+            @if (User.Identity.IsAuthenticated)
+            {
+                
             <tr>
                 <td></td>
                 <td>
-                    <button class="price-button" data-tier="free" data-bs-target="#confirmationModal">Free Tier - Active</button>
+                    @if (Model.CurrentSubscription == "standard" || Model.CurrentSubscription == "premium")
+                    {
+                    <button class="disable-ui" >Free Tier</button>
+                    }else{
+                    <button class="price-button" data-tier="free" data-bs-target="#confirmationModal">Free Tier</button>
+                    }
                 </td>
                 <td>
-                    <button class="price-button" data-tier="standard" data-bs-toggle="modal" data-bs-target="#confirmationModal">₹499 - Buy Standard Tier</button>
+                    @if (Model.CurrentSubscription == "free")
+                    {
+                        <button class="price-button" data-tier="standard" data-bs-toggle="modal" data-bs-target="#confirmationModal">₹499 - Buy Standard Tier</button>
+                    }
+                    else
+                    {
+                        <button class="disable-ui">₹499 - Buy Standard Tier</button>
+                    }
                 </td>
                 <td>
-                    <button class="price-button" data-tier="premium" data-bs-toggle="modal" data-bs-target="#confirmationModal">₹999 - Buy Premium Tier</button>
-                </td>
-            </tr>
+                    @if (Model.CurrentSubscription == "free" || Model.CurrentSubscription == "standard")
+                    {
+                        <button class="price-button" data-tier="premium" data-bs-toggle="modal" data-bs-target="#confirmationModal">₹999 - Buy Premium Tier</button>
+                    }
+                    else{
+                        <button class="disable-ui" >₹999 - Buy Premium Tier</button>
+                        }
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td class="feature-name">Price</td>
+                    <td>Free </td>
+                    <td>499</td>
+                    <td>999</td>
+                </tr>
+            }
         </tbody>
     </table>
 
