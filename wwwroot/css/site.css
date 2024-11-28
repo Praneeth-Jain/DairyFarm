@@ -59,7 +59,6 @@ body {
     border-radius: 10px;
     font-size: 16px;
     text-align: left;
-    width: 100%;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -77,7 +76,7 @@ body {
 
 
 .cattleview-right-upper {
-    width: 100%;
+    
     padding: 20px;
     overflow: hidden;
 }
@@ -113,7 +112,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 70%;
+  
 }
 
 .cattleview-action-btn {
@@ -125,13 +124,19 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%; 
-    max-width: 250px; 
+    width: 100%;
+    max-width: 250px;
+    margin-top: 20px;
+    margin-left: 30px;
 }
+
+
 
     .cattleview-action-btn:hover {
         background-color: #45a049;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform:scale(1.05);
+
     }
 
 .feed-form,
@@ -140,7 +145,6 @@ body {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
     transition: all 0.3s ease;
 }
 
@@ -215,10 +219,12 @@ form button {
 }
 
 .login-body {
-    background-image: url('/img/login.png');
+    background-image: url('/img/login-bg.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    height:100%;
+    width:100%;
 }
 
 

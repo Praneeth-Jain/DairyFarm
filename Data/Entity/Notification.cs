@@ -11,7 +11,7 @@ namespace DairyFarm.Data.Entity
         public int OwnerId { get; set; }
 
         [Required]
-        public int CowId { get; set; }
+        public int? CowId { get; set; }
 
         [Required]
         public string Category { get; set; }
