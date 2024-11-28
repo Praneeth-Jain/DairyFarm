@@ -8,107 +8,147 @@
     <link href="~/css/site.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
     <style>
-        body {
-            margin: 0;
-            overflow-x: hidden;
-            background-color: #f7f7f7;
-            font-family: 'Arial', sans-serif;
-        }
+    html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
 
-        .top-bar {
-            background-color: #4CAF50;
-            color: white;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            top: 0;
-            margin-left:10vw;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
-        .toggle-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-        }
+.top-bar {
+    background-color: #4CAF50;
+    color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-        .left-nav {
-            background-color: #FFFFFF;
-            color: #333;
-            width: 250px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: -250px;
-            transition: left 0.3s ease-in-out;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
-        }
+.top-bar a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
 
-            .left-nav.active {
-                left: 0;
-            }
+.top-bar a:hover {
+    background-color: #43A047;
+}
 
-        .nav-link {
-            color: #4CAF50;
-            font-weight: bold;
-            padding: 10px 20px;
-        }
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
 
-            .nav-link:hover {
-                color: #155d27;
-                background-color: #f1f1f1;
-            }
+.left-nav {
+    background-color: #FFFFFF;
+    color: #333;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 70px; /* Adjusted to avoid overlap with the top-bar */
+    left: -250px;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 999;
+}
 
-        .content {
-            margin-left: 0;
-            padding: 20px;
-            transition: margin-left 0.3s ease-in-out;
-        }
+.left-nav.active {
+    left: 0;
+}
 
-            .content.shift {
-                margin-left: 250px;
-            }
+.nav-link {
+    color: #4CAF50;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+}
 
-        .section-header {
-            color: #4CAF50;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+.nav-link:hover {
+    color: #155d27;
+    background-color: #f1f1f1;
+}
 
-        .info-box {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.content {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+    margin-top: 70px;
+    min-height: calc(100vh - 70px); /* Adjusted height for content */
+    padding-top: 10px;
+}
 
-        .btn-success {
-            background-color: #4CAF50;
-            border: none;
-        }
+.content.shift {
+    margin-left: 250px;
+}
 
-            .btn-success:hover {
-                background-color: #43A047;
-            }
+.section-header {
+    color: #4CAF50;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-        .btn-outline-light {
-            border-color: white;
-            color: white;
-        }
+.info-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-            .btn-outline-light:hover {
-                background-color: white;
-                color: #4CAF50;
-            }
+.btn-success {
+    background-color: #4CAF50;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #43A047;
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+
+.nav-link.active {
+    background-color: #d3ffd7;
+    color: #4CAF50;
+}
+
     </style>
 </head>
 <body>
@@ -119,7 +159,7 @@
          
             </div>
             <div>
-                <a asp-page="Subscription/Index" class="btn btn-success me-2">Buy Premium</a>
+                <a asp-page="/Subscription/Index" class="btn btn-success me-2">Buy Premium</a>
                 @{
                     @if (User.Identity.IsAuthenticated)
                     {
@@ -147,17 +187,17 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        (function () {
-            const toggleNavBtn = document.getElementById('toggleNavBtn');
-            const sideNav = document.getElementById('sideNav');
-            const mainContent = document.getElementById('mainContent');
+        <script>
+   (function () {
+        const toggleNavBtn = document.getElementById('toggleNavBtn');
+        const sideNav = document.getElementById('sideNav');
+        const mainContent = document.getElementById('mainContent');
 
-            toggleNavBtn.addEventListener('click', () => {
-                sideNav.classList.toggle('active');
-                mainContent.classList.toggle('shift');
-            });
-        })();
+        toggleNavBtn.addEventListener('click', () => {
+            sideNav.classList.toggle('active');
+            mainContent.classList.toggle('shift');
+        });
+    })();
     </script>
     @RenderSection("Scripts", required: false)
 </body>

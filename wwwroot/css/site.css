@@ -18,7 +18,6 @@ body {
     color: #333;
 }
 
-/* General Focus Styling */
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus,
@@ -27,25 +26,23 @@ body {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-/* Cattleview Container */
 .cattleview-container {
     display: flex;
     height: 100vh;
     justify-content: space-between;
     padding: 20px;
-    gap: 20px; /* Adds spacing between sections */
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
-/* Left Container for Cow List */
+
 .cattleview-left {
-    width: 25%; /* Reduced width to free space for the form */
-    /*background-color: #fff;*/
-   /* border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    width: 25%; 
     padding: 20px;
     overflow-y: auto;
     max-height: 90vh;
     height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .cattleview-cow-list {
@@ -53,11 +50,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
-    .cattleview-cow-list li {
-        margin-bottom: 15px;
-        transition: transform 0.3s ease;
-    }
 
 .cattleview-cow-item {
     background-color: #ffffff;
@@ -78,22 +70,18 @@ body {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    /* Active Cow Styling */
     .cattleview-cow-item.active {
         border-color: #4caf50;
         background-color: #f1f8f6;
     }
 
-/* Right Upper Section (Cow Details) */
+
 .cattleview-right-upper {
-    width: 100%; /* Allows it to dynamically adjust */
+    width: 100%;
     padding: 20px;
-    /*background-color: #fff;*/
-/*    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     overflow: hidden;
-     /* Adjusted height to give more space to the lower section */
 }
+
 .cattleview-cow-details {
     padding: 20px;
     background-color: #f8f8f8;
@@ -118,20 +106,16 @@ body {
         font-size: 16px;
     }
 
-/* Right Lower Section (Forms) */
+
 .cattleview-right-lower {
-    flex-grow: 1; /* Allows it to take up the remaining space */
+    flex-grow: 1;
     padding: 20px;
-    /*background-color: #fff;*/
-  /*  border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 70%; /* Increased width to occupy more space */
+    width: 70%;
 }
 
-/* Action Buttons */
 .cattleview-action-btn {
     background-color: #4caf50;
     color: white;
@@ -141,9 +125,8 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 70%;
-    margin-top:20px;
-    margin-left:30px;
+    width: 100%; 
+    max-width: 250px; 
 }
 
     .cattleview-action-btn:hover {
@@ -151,14 +134,13 @@ body {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-/* Form Styling */
 .feed-form,
 .cattleview-milk-form {
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensures the form takes the full width of its parent */
+    width: 100%;
     transition: all 0.3s ease;
 }
 
@@ -194,7 +176,6 @@ form button {
         background-color: #45a049;
     }
 
-/* Success/Error Messages */
 .success-message,
 .error-message {
     padding: 10px;
@@ -213,12 +194,10 @@ form button {
     color: #d32f2f;
 }
 
-/* Scrollable Cow List */
 .cattleview-left {
     overflow-y: auto;
 }
 
-/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -235,4 +214,65 @@ form button {
     animation: fadeIn 0.5s ease-in-out;
 }
 
+.login-body {
+    background-image: url('/img/login.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
+
+@media(min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        padding: 15px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .info-box {
+        padding: 15px;
+    }
+
+    .section-header {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left-nav {
+        position: fixed;
+        top: 70px;
+        left: -250px;
+        width: 100%;
+        z-index: 1001;
+    }
+
+        .left-nav.active {
+            left: 0;
+        }
+
+    .content {
+        margin-left: 0;
+    }
+
+        .content.shift {
+            margin-left: 0;
+        }
+
+    .top-bar .toggle-btn {
+        font-size: 30px;
+    }
+}
