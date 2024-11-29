@@ -1,0 +1,123 @@
+﻿@page
+@model DairyFarm.Pages.Cattle.CowStatsModel
+@{
+}
+
+
+<div class="container">
+    <form  method="get">
+    <input type="text" asp-for="@Model.SearchString" />
+        <button class="btn-primary" type="submit">Search</button>
+     </form>
+
+
+     <div class="stats">
+
+    <table>
+    <tr>
+            <th>
+                Name
+           <a asp-page="/Cattle/CowStats" asp-route-SortOrder="@Model.NameSort">
+               @if(Model.NameSort==""){
+                        <span>&#11015;</span>
+                    }
+                    else
+                    {
+                        <span>&#11014</span>
+                    }     
+                </a> 
+           </th>
+       <th>
+                Breed
+           <a asp-page="/Cattle/CowStats" asp-route-SortOrder="@Model.BreedSort">
+                    @if (Model.BreedSort == "Breed")
+                    {
+                        <span>&#11015;</span>
+                    }
+                    else
+                    {
+                        <span>&#11014</span>
+                    }
+                </a>
+       </th>
+       <th>
+                Purchased Date
+           <a asp-page="/Cattle/CowStats" asp-route-SortOrder="@Model.PurchasedSort">
+                    @if (Model.PurchasedSort == "Date")
+                    {
+                        <span>&#11015;</span>
+                    }
+                    else
+                    {
+                        <span>&#11014</span>
+                    }
+                </a>    
+       </th>
+       <th>
+                Breeding Date
+            <a asp-page="/Cattle/CowStats" asp-route-SortOrder="@Model.BreedDateSort">
+                    @if (Model.BreedDateSort == "BreedDate")
+                    {
+                        <span>&#11015;</span>
+                    }
+                    else
+                    {
+                        <span>&#11014</span>
+                    }
+                </a>
+            </th>
+       <th>
+                Lactation End Date
+            <a asp-page="/Cattle/CowStats" asp-route-SortOrder="@Model.LactationSort">
+                    @if (Model.LactationSort == "Lactation")
+                    {
+                        <span>&#11015;</span>
+                    }
+                    else
+                    {
+                        <span>&#11014</span>
+                    }
+                </a>
+            </th>
+       <th>
+                Last Calving Date
+            <a asp-page="/Cattle/CowStats" asp-route-SortOrder="@Model.LastCalvSort">
+                    @if (Model.LastCalvSort == "Last")
+                    {
+                        <span>&#11015;</span>
+                    }
+                    else
+                    {
+                        <span>&#11014</span>
+                    }
+                </a>
+            </th>
+       <th>
+                Next Calving Date
+            <a asp-page="/Cattle/CowStats" asp-route-SortOrder="@Model.NextCalvSort">
+                    @if (Model.NextCalvSort == "Next")
+                    {
+                        <span>&#11015;</span>
+                    }
+                    else
+                    {
+                        <span>&#11014</span>
+                    }
+                </a>
+            </th>
+    </tr>
+        @foreach(var Cow in Model.cowStats)
+        {
+            <tr>
+                <td>@Cow.CowName</td>
+                <td>@Cow.Breed</td>
+                <td>@Cow.PurchaseDate.ToString("d")</td>
+                <td>@Cow.BreedingDate.ToString("d")</td>
+                <td>@Cow.LactationEndDate.ToString("d")</td>
+                <td>@Cow.LastCalvingDate.ToString("d")</td>
+                <td>@Cow.NextCalvingDate.ToString("d")</td>
+            </tr> 
+        }
+    </table>
+     </div>
+</div>
