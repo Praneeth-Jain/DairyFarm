@@ -1,0 +1,25 @@
+﻿@page
+@model DairyFarm.Pages.OwnerProfileModel
+@{
+}
+<style>
+    .details-owner{
+        display:grid;
+        place-content:center;
+    }
+</style>
+
+<div class="container">
+    <div class="details-owner card">
+        <div class="card-img-top">
+            <img src="/img/profile.jpg" alt="Alternate Text" class="card-img" />
+        </div>
+        <div class="card-body fs-3">
+            <p class="card-text">Name : @Model.owners.OwnerName.ToUpper()</p>
+            <p class="card-text">Email : @Model.owners.OwnerEmail</p>
+            <p class="card-text">Phone : @Model.owners.OwnerPhone</p>
+            <p class="card-text">Subscription : @Model.Tier.ToUpper()</p>
+            <p class="card-text">Created At : @Model.owners.CreatedAt</p>
+        </div>
+    </div>
+</div>
