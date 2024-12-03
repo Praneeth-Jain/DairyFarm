@@ -34,7 +34,8 @@ namespace DairyFarm
                 options.AddPolicy("FreeTier", policy =>
                     policy.RequireAssertion(context =>
                         context.User.HasClaim(c => c.Type == "SubscriptionType" &&
-                                                    (c.Value == "free" || c.Value == "standard" || c.Value == "premium"))));
+                            
+                        (c.Value == "free" || c.Value == "standard" || c.Value == "premium"))));
 
                 options.AddPolicy("StandardTier", policy =>
                     policy.RequireAssertion(context =>

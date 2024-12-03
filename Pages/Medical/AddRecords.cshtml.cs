@@ -24,8 +24,6 @@ namespace DairyFarm.Pages.Medical
 
         public void OnGet()
         {
-
-            
             CattleList = _context.cows.ToList();
         }
 

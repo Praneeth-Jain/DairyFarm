@@ -10,7 +10,9 @@ namespace DairyFarm.Pages.Medical
     [Authorize(Policy = "PremiumTier")]
     public class IndexModel : PageModel
     {
-        public MedicalViewModel MedicalDetails { get; set; }
+        public MedicalViewModel  MedicalDetails { get; set; }
+       
+
         public List<Cows> cowlist = new List<Cows>();
 
         [BindProperty]
@@ -35,6 +37,11 @@ namespace DairyFarm.Pages.Medical
         {
             if (selectedCow != 0)
             {
+                if (HttpContext.Session.IsAvailable)
+                {
+                    var id = (int)HttpContext.Session.GetInt32("Id");
+                    cowlist = _context.cows.Where(c => c.OwnerId == id).ToList();
+                }
                 MedicalDetails = (from cows in _context.cows
                                   join medic in _context.cowBreedings on cows.CowId equals medic.CowId
                                   where cows.CowId == selectedCow
@@ -52,26 +59,26 @@ namespace DairyFarm.Pages.Medical
             }
         }
 
-        // Get status class based on date
+       
         public string GetDateStatus(DateTime date)
         {
             if (date < DateTime.Now)
-                return "date-passed";  // Gray color for past dates
+                return "date-passed"; 
             else if (date < DateTime.Now.AddDays(7))
-                return "date-nearing"; // Red color for dates nearing
+                return "date-nearing"; 
             else
-                return "date-normal"; // Normal date (Green)
+                return "date-normal"; 
         }
 
-        // Get the status text
+       
         public string GetDateStatusText(DateTime date)
         {
             if (date < DateTime.Now)
-                return "Passed";  // Gray color for past dates
+                return "Passed";  
             else if (date < DateTime.Now.AddDays(7))
-                return "Nearing"; // Red color for dates nearing
+                return "Nearing"; 
             else
-                return "Normal"; // Green color for future dates
+                return "Normal";
         }
     }
 }
