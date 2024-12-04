@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\finance\\income.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\finance\\income.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\finance\\expense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\finance\\expense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\finance\\income.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\finance\\income.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\finance\\expense.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\finance\\expense.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\ownerlogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\ownerlogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\dairyfarm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:dairyfarm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\cattle\\partials\\_cowdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\cattle\\partials\\_cowdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\medical\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\medical\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\medical\\addrecords.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\medical\\addrecords.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\cattle\\partials\\_cowdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\cattle\\partials\\_cowdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\cattle\\cattleview.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\viewcomponents\\menuviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:viewcomponents\\menuviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\dairyfarm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:dairyfarm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\cattle\\partials\\_milkproductionform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -77,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\medical\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\medical\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\ownerlogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|solutionrelative:pages\\ownerlogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A43BBBAC-1DCA-43C7-8EBB-81D79D8AE21C}|DairyFarm.csproj|c:\\users\\user\\desktop\\dairyfarm-dev\\dairyfarm\\pages\\ownerlogout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -194,7 +210,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -206,55 +222,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAQwCUAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Income.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Finance\\Income.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Finance\\Income.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Finance\\Income.cshtml.cs",
+              "RelativeToolTip": "Pages\\Finance\\Income.cshtml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wC8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T04:44:04.03Z"
+              "WhenOpened": "2024-12-04T05:23:05.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Components\\Menu\\Default.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Components\\Menu\\Default.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Components\\Menu\\Default.cshtml",
-              "RelativeToolTip": "Pages\\Components\\Menu\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T06:01:44.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAALEAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T04:41:33.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CattleView.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\CattleView.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Cattle\\CattleView.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\CattleView.cshtml",
-              "RelativeToolTip": "Pages\\Cattle\\CattleView.cshtml",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T09:17:53.147Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "CattleView.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\CattleView.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Cattle\\CattleView.cshtml.cs",
@@ -266,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "_CowDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\Partials\\_CowDetails.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\Partials\\_CowDetails.cshtml",
@@ -274,11 +255,104 @@
               "RelativeToolTip": "Pages\\Cattle\\Partials\\_CowDetails.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T11:35:17.481Z"
+              "WhenOpened": "2024-11-28T11:35:17.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Income.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Finance\\Income.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Finance\\Income.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Finance\\Income.cshtml",
+              "RelativeToolTip": "Pages\\Finance\\Income.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T05:22:06.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OwnerLogin.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\OwnerLogin.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\OwnerLogin.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\OwnerLogin.cshtml.cs",
+              "RelativeToolTip": "Pages\\OwnerLogin.cshtml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T04:45:30.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Expense.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Finance\\Expense.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Finance\\Expense.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Finance\\Expense.cshtml.cs",
+              "RelativeToolTip": "Pages\\Finance\\Expense.cshtml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAiwCYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T04:19:01.175Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Expense.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Finance\\Expense.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Finance\\Expense.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Finance\\Expense.cshtml",
+              "RelativeToolTip": "Pages\\Finance\\Expense.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T04:18:35.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CattleView.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\CattleView.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Cattle\\CattleView.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\CattleView.cshtml",
+              "RelativeToolTip": "Pages\\Cattle\\CattleView.cshtml",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T09:17:53.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAALEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T04:41:33.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Components\\Menu\\Default.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Components\\Menu\\Default.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Components\\Menu\\Default.cshtml",
+              "RelativeToolTip": "Pages\\Components\\Menu\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T06:01:44.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AddRecords.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Medical\\AddRecords.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Medical\\AddRecords.cshtml.cs",
@@ -290,20 +364,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Medical\\index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Medical\\index.cshtml.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Medical\\index.cshtml.cs",
               "RelativeToolTip": "Pages\\Medical\\index.cshtml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wBgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T11:01:08.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
+              "Title": "DairyFarm.csproj",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\DairyFarm.csproj",
+              "RelativeDocumentMoniker": "DairyFarm.csproj",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\DairyFarm.csproj",
+              "RelativeToolTip": "DairyFarm.csproj",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-27T05:27:02.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAQwCUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T04:44:04.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "MenuViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\ViewComponents\\MenuViewComponent.cs",
               "RelativeDocumentMoniker": "ViewComponents\\MenuViewComponent.cs",
@@ -315,19 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DairyFarm.csproj",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\DairyFarm.csproj",
-              "RelativeDocumentMoniker": "DairyFarm.csproj",
-              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\DairyFarm.csproj",
-              "RelativeToolTip": "DairyFarm.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-27T05:27:02.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "_MilkProductionForm.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\Partials\\_MilkProductionForm.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\Partials\\_MilkProductionForm.cshtml",
@@ -339,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Subscription\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Subscription\\Index.cshtml",
@@ -351,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
@@ -363,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "SubMenuItems.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Data\\Entity\\SubMenuItems.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\SubMenuItems.cs",
@@ -375,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "MenuItems.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Data\\Entity\\MenuItems.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\MenuItems.cs",
@@ -387,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Subscription\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Subscription\\Index.cshtml.cs",
@@ -395,11 +482,12 @@
               "RelativeToolTip": "Pages\\Subscription\\Index.cshtml.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:37:36.289Z"
+              "WhenOpened": "2024-11-25T11:37:36.289Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "Expense.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Forms\\Expense.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Forms\\Expense.cshtml.cs",
@@ -411,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -423,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Medical\\index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Medical\\index.cshtml",
@@ -435,19 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "OwnerLogin.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\OwnerLogin.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\OwnerLogin.cshtml.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\OwnerLogin.cshtml.cs",
-              "RelativeToolTip": "Pages\\OwnerLogin.cshtml.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T04:45:30.866Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "OwnerLogout.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\OwnerLogout.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\OwnerLogout.cshtml.cs",
@@ -459,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
@@ -471,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "AddRecords.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Medical\\AddRecords.cshtml",
               "RelativeDocumentMoniker": "Pages\\Medical\\AddRecords.cshtml",
@@ -483,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "MilkProductionHandler.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\MilkProductionHandler.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\MilkProductionHandler.cshtml",
@@ -495,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -507,7 +583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "OwnerLogin.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\OwnerLogin.cshtml",
               "RelativeDocumentMoniker": "Pages\\OwnerLogin.cshtml",
@@ -519,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "OwnerLogout.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\OwnerLogout.cshtml",
               "RelativeDocumentMoniker": "Pages\\OwnerLogout.cshtml",
@@ -531,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "Byproduct.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Forms\\Byproduct.cshtml",
               "RelativeDocumentMoniker": "Pages\\Forms\\Byproduct.cshtml",
@@ -543,7 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -555,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
@@ -567,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "AddCattle.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\AddCattle.cshtml",
               "RelativeDocumentMoniker": "Pages\\Cattle\\AddCattle.cshtml",
@@ -579,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "Food.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Forms\\Food.cshtml",
               "RelativeDocumentMoniker": "Pages\\Forms\\Food.cshtml",
@@ -591,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Data\\Entity\\Notification.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\Notification.cs",
@@ -603,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Data\\DBContext\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\DBContext\\ApplicationDbContext.cs",
@@ -615,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Error.cshtml",
               "RelativeDocumentMoniker": "Pages\\Error.cshtml",
@@ -627,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -639,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "AddCattle.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\AddCattle.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Cattle\\AddCattle.cshtml.cs",
@@ -647,11 +723,12 @@
               "RelativeToolTip": "Pages\\Cattle\\AddCattle.cshtml.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAkwEkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:18:19.343Z"
+              "WhenOpened": "2024-11-26T09:18:19.343Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "20241127045215_Navbar.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Migrations\\20241127045215_Navbar.cs",
               "RelativeDocumentMoniker": "Migrations\\20241127045215_Navbar.cs",
@@ -663,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "20241127044623_Nav.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Migrations\\20241127044623_Nav.cs",
               "RelativeDocumentMoniker": "Migrations\\20241127044623_Nav.cs",
@@ -675,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "MilkProductionHandler.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Cattle\\MilkProductionHandler.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Cattle\\MilkProductionHandler.cshtml.cs",
@@ -687,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "Byproduct.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Forms\\Byproduct.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Forms\\Byproduct.cshtml.cs",
@@ -699,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "Food.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Forms\\Food.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Forms\\Food.cshtml.cs",
@@ -711,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "OwnerRegister.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\OwnerRegister.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\OwnerRegister.cshtml.cs",
@@ -723,7 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "Expense.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\Forms\\Expense.cshtml",
               "RelativeDocumentMoniker": "Pages\\Forms\\Expense.cshtml",
@@ -735,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "Subscriptions.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Data\\Entity\\Subscriptions.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\Subscriptions.cs",
@@ -747,7 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\DairyFarm-Dev\\DairyFarm\\Pages\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Pages\\_ViewStart.cshtml",
@@ -756,10 +833,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-26T04:16:12.985Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
