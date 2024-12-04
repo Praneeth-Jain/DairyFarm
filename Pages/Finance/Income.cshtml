@@ -1,0 +1,140 @@
+﻿@page
+@model DairyFarm.Pages.Finance.IncomeModel
+@{
+}
+<div class="income-page">
+    <header class="page-header">
+        <h1>Income</h1>
+    </header>
+
+    <div class="filter-section">
+        <form>
+            <select class="filter-dropdown" asp-for="@Model.filteredQuery">
+                <option value="">All Time</option>
+                <option value="Y">This Year</option>
+                <option value="M">This Month</option>
+                <option value="T">Today</option>
+            </select>
+            <button class="filter-button" type="submit">Filter</button>
+        </form>
+    </div>
+
+    <div class="income-cards">
+        <div class="card total-income">
+            <h3>Total Income</h3>
+            <p>@Model.TotalIncome</p>
+        </div>
+        <div class="card milk-income">
+            <h3>Income Through Milk</h3>
+            <p>@Model.MilkIncome</p>
+        </div>
+        <div class="card byproduct-income">
+            <h3>Income Through ByProduct</h3>
+            <p>@Model.ByProductIncome</p>
+        </div>
+    </div>
+</div>
+
+<style>
+   
+    .income-page {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 20px;
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+        color: #0066cc; 
+    }
+
+    
+    .filter-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .filter-dropdown {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #0066cc;
+        border-radius: 5px;
+        color: #0066cc;
+        margin-right: 10px;
+        background-color: #ffffff;
+    }
+
+    .filter-button {
+        background-color: #28a745; 
+        color: #ffffff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .filter-button:hover {
+        background-color: #218838;
+    }
+
+    .income-cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        flex: 1 1 calc(30% - 20px);
+        border: 2px solid #0066cc; 
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .total-income {
+        border-color: #0066cc; 
+    }
+
+    .milk-income {
+        border-color: #28a745; 
+    }
+
+    .byproduct-income {
+        border-color: #ffc107; 
+    }
+
+    .total-income h3 {
+        color: #0066cc;
+    }
+
+    .milk-income h3 {
+        color: #28a745;
+    }
+
+    .byproduct-income h3 {
+        color: #ffc107;
+    }
+</style>
+</div>
