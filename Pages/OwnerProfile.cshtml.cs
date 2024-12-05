@@ -15,6 +15,8 @@ namespace DairyFarm.Pages
 
         public string Tier {  get; set; }
 
+        public int CowCount { get; set; }
+
         public OwnerProfileModel(ApplicationDbContext context) 
         {
             _context = context;

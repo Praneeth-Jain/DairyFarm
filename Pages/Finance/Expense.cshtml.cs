@@ -1,12 +1,13 @@
 using DairyFarm.Data.DBContext;
 using DairyFarm.Data.Entity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DairyFarm.Pages.Finance
 {
 
-
+    [Authorize(Policy ="PremiumTier")]
     public class ExpenseModel : PageModel
     {
         public IQueryable<Expense> ExpenseUser { get; set; }
