@@ -1,0 +1,34 @@
+﻿@page
+@model DairyFarm.Pages.Forms.AddByProductModel
+@{
+}
+
+
+<div>
+    <h1>
+        ByProduct Details
+    </h1>
+</div>
+
+<form method="post">
+
+    
+
+    <div class="form-group">
+        <label asp-for="newProduct.ProductName" class="control-label">ByProduct :</label>
+        <input asp-for="newProduct.ProductName" class=" form-control" placeholder="Enter ByProduct Type (Ghee,Butter,etc)" />
+        <span asp-validation-for="newProduct.ProductName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="newProduct.Price" class="control-label">Enter Price per Unit :</label>
+        <input asp-for="newProduct.Price" class=" form-control" placeholder="Enter ByProduct price in rs" />
+        <span asp-validation-for="newProduct.Price" class="text-danger"></span>
+    </div>
+  
+
+   
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-dark btn-lg" style="background-color: #28a745; border-color: #28a745;">Done</button>
+    </div>
+
+</form>

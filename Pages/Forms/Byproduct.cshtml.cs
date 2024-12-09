@@ -21,10 +21,12 @@ namespace DairyFarm.Pages.Forms
         [BindProperty]
 
         public ByproductClass byprod {  get; set; }
+
+        public List<ByProduct> byProducts { get; set; } = new List<ByProduct>();
         public void OnGet()
         {
-          
-
+            var OwnerId = (int)HttpContext.Session.GetInt32("Id");
+            byProducts =_context.byProduct.Where(p=>p.OwnerId==OwnerId).ToList();
         }
 
         public IActionResult OnPost()
@@ -34,28 +36,22 @@ namespace DairyFarm.Pages.Forms
                 return Page();
             }
             var OwnerId = (int)HttpContext.Session.GetInt32("Id");
-            
-            var byproduct = new ByProduct
-            {
-                OwnerId = OwnerId,
-                Date = byprod.Date,
-                Type = byprod.Type,
-                Quantity = byprod.Quantity,
-                Revenue = byprod.Revenue,
 
-            };
 
-            var income = new Income
-            {
-                OwnerId = OwnerId,
-                Amount = byprod.Revenue,
-                Date = byprod.Date,
-                Category = "ByProduct",
-            };
-            _context.incomes.Add(income);
-            _context.byProduct.Add(byproduct);
-            _context.SaveChanges();
-            TempData["Message"] = "ByProduct Added Successfully";
+            if (byprod != null) { 
+                var price=_context.byProduct.Where(p=>p.Type==byprod.Type).Select(p=>p.Revenue).FirstOrDefault();
+                var amt = price * byprod.Quantity;
+                var income = new Income
+                {
+                    OwnerId = OwnerId,
+                    Amount = amt,
+                    Date = byprod.Date,
+                    Category = "ByProduct",
+                };
+                _context.incomes.Add(income);
+                _context.SaveChanges();
+                TempData["Message"] = "ByProduct Added Successfully";
+            }
             return RedirectToPage();
         }
     }

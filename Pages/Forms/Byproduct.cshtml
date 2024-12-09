@@ -30,7 +30,12 @@
 
     <div class="form-group">
         <label asp-for="byprod.Type" class="control-label">Type :</label>
-        <input asp-for="byprod.Type" class=" form-control" placeholder="Enter ByProduct Type (Ghee,Butter,etc)" />
+        <select asp-for="byprod.Type" class="form-select">
+            @foreach(var product in Model.byProducts)
+            {
+                <option value="@product.Type">@product.Type</option>
+            }
+        </select>
         <span asp-validation-for="byprod.Type" class="text-danger"></span>
     </div>
     
@@ -40,12 +45,7 @@
         <span asp-validation-for="byprod.Quantity" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="byprod.Revenue" class="control-label">Amount :</label>
-        <input asp-for="byprod.Revenue" class=" form-control" placeholder="Enter the Amount" />
-        <span asp-validation-for="byprod.Revenue" class="text-danger"></span>
-    </div>
-
+   
     <div class="d-grid gap-2">
         <button type="submit" class="btn btn-dark btn-lg" style="background-color: #28a745; border-color: #28a745;">Done</button>
     </div>

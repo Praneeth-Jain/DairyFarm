@@ -24,7 +24,8 @@ namespace DairyFarm.Pages.Medical
 
         public void OnGet()
         {
-            CattleList = _context.cows.ToList();
+            var OwnerId = (int)HttpContext.Session.GetInt32("Id");
+            CattleList = _context.cows.Where(c=>c.OwnerId==OwnerId).ToList();
         }
 
         public IActionResult OnPost()

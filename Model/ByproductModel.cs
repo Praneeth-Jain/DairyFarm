@@ -14,7 +14,6 @@ namespace DairyFarm.Model
         [Required]
         public decimal Quantity { get; set; }
 
-        [Required]
-        public decimal Revenue { get; set; }
+       
     }
 }
