@@ -1,0 +1,30 @@
+﻿
+@page
+@model DairyFarm.Pages.Admin.HomeModel
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Admin Home</h1>
+    <table class="table table-bordered table-striped">
+        <thead style="background-color: #28a745; color: white;">
+            <tr>
+                <th>Owner Name</th>
+                <th>Number Of Cows</th>
+                <th>Subscription Tier</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Admins)
+            {
+                <tr>
+                    <td>@item.OwnerName</td>
+                    <td>@item.CowCount</td>
+                    <td>@item.SubscriptionTier</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-center mt-4">
+        <a asp-page="/Admin/Stats" class="btn btn-success">View Stats</a>
+    </div>
+</div>

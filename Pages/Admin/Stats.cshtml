@@ -1,0 +1,48 @@
+﻿@page
+@model DairyFarm.Pages.Admin.StatsModel
+@{
+}
+
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Admin Summary</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center border-success">
+                <div class="card-header bg-success text-white">
+                    Total Income Earned
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">₹@Model.TotalIncome</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center border-primary">
+                <div class="card-header bg-primary text-white">
+                    Total Number of Owners
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">@Model.TotalOwners</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center border-warning">
+                <div class="card-header bg-warning text-white">
+                    Total Number of Cows
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">@Model.TotalCows</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="text-center mt-4">
+        <a asp-page="/Admin/Home" class="btn btn-secondary">Back to Admin Home</a>
+    </div>
+</div>
