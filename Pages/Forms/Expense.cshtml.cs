@@ -18,6 +18,8 @@ namespace DairyFarm.Pages.Forms
         }
         [BindProperty]
         public ExpenseClass exp {  get; set; }
+
+        public int? CowId { get; set; }
         public void OnGet()
         {
           
@@ -31,14 +33,22 @@ namespace DairyFarm.Pages.Forms
             }
             var OwnerId = (int)HttpContext.Session.GetInt32("Id");
 
+            if (exp.CowName != null)
+            {
+                CowId=_context.cows.Where(c=>c.CowName==exp.CowName).Select(c=>c.CowId).FirstOrDefault();
+            }
+            else
+            {
+                CowId = null;
+            }
+
             var expense = new Expense
             {
                 OwnerId = OwnerId,
                 Category = exp.Category,
                 Amount = exp.Amount,
                 Date = exp.Date,
-
-
+                CowId=CowId
             };
             _context.expenses.Add(expense);
             _context.SaveChanges();

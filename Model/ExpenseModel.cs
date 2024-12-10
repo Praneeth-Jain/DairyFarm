@@ -12,5 +12,7 @@ namespace DairyFarm.Model
 
         [Required]
         public DateTime Date { get; set; }
+
+        public string? CowName { get; set; }
     }
 }

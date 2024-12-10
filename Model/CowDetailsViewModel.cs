@@ -12,6 +12,11 @@
         public decimal TotalMilkProduced { get; set; }
 
         public decimal MilkIncome { get; set; }
+
+        public decimal Profit { get; set; }
+
+        public decimal MedicalExpense { get; set; }
+
     }
 
 }

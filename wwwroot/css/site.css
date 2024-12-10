@@ -54,6 +54,9 @@ body {
     margin: 0;
 }
 
+
+
+
 .cattleview-cow-item {
     background-color: #ffffff;
     color: #333;
@@ -109,15 +112,18 @@ body {
         font-size: 16px;
     }
 
+        .cattleview-cow-details span:hover{
+            cursor:help;
+        }
 
-.cattleview-right-lower {
-    flex-grow: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  
-}
+
+        .cattleview-right-lower {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
 .cattleview-action-btn {
     background-color: #4caf50;

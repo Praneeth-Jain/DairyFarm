@@ -1,23 +1,38 @@
 ﻿@model DairyFarm.Model.CowDetailsViewModel
-
 <div class="cattleview-cow-details">
-    <h2>@Model.Name</h2>
+    <h2>🐄 @Model.Name</h2>
     <ul>
-        <li><strong>Breed:</strong> @Model.Breed</li>
-        <li><strong>Birth Date:</strong> @Model.DOB.ToString("yyyy-MM-dd")</li>
-        <li><strong>Total Milk Produced:</strong> @Model.TotalMilkProduced L</li>
-        <li><strong>Income through Milk</strong>Rs.@Model.MilkIncome </li>
-        <li><strong>Feed Expense :</strong>Rs.@Model.FeedExpense </li>
+        <li>
+            <span data-bs-toggle="tooltip" data-bs-placement="top" title="Breed">🧬</span> @Model.Breed
+        </li>
+        <li>
+            <span data-bs-toggle="tooltip" data-bs-placement="top" title="Birth Date">🎂</span> @Model.DOB.ToString("yyyy-MM-dd")
+        </li>
+        <li>
+            <span data-bs-toggle="tooltip" data-bs-placement="top" title="Total Milk Produced">🥛</span> @Model.TotalMilkProduced L
+        </li>
+        <li>
+            <span data-bs-toggle="tooltip" data-bs-placement="top" title="Income Through Milk">💰</span> Rs.@Model.MilkIncome
+        </li>
+        <li>
+            <span data-bs-toggle="tooltip" data-bs-placement="top" title="Feed Expense">🍽️</span> Rs.@Model.FeedExpense
+        </li
+        ><li>
+            <span data-bs-toggle="tooltip" data-bs-placement="top" title="Medical Expense">💉</span> Rs.@Model.MedicalExpense
+        </li>
+        <li>
+            <span data-bs-toggle="tooltip" data-bs-placement="top" title="Profit">💸</span> Rs.@Model.Profit
+        </li>
+        
     </ul>
 </div>
 
 <div class="cattleview-buttons">
-    <button id="cattleview-add-feed-btn" class="cattleview-action-btn">Add Feed Details</button>
-    <button id="cattleview-add-milk-btn" class="cattleview-action-btn">Add Milk Production</button>
+    <button id="cattleview-add-feed-btn" class="btn btn-success">Add Feed Details</button>
+    <button id="cattleview-add-milk-btn" class="btn btn-primary">Add Milk Production</button>
 </div>
 
 <script>
-    // Load feed form
     $("#cattleview-add-feed-btn").on("click", function () {
         const cowId = $(".cattleview-cow-item.active").data("cow-id");
 
@@ -38,7 +53,6 @@
         });
     });
 
-    // Load milk production form
     $("#cattleview-add-milk-btn").on("click", function () {
         const cowId = $(".cattleview-cow-item.active").data("cow-id");
 
@@ -56,6 +70,14 @@
             error: function () {
                 alert("Failed to load milk production form.");
             }
+        });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
         });
     });
 </script>

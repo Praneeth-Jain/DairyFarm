@@ -12,6 +12,8 @@ namespace DairyFarm
 
             builder.Services.AddRazorPages();
 
+            
+
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
                 string ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;

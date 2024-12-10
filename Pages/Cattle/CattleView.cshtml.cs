@@ -58,11 +58,20 @@ namespace DairyFarm.Pages.Cattle
             .FirstOrDefaultAsync();
 
             var expenseData = await _context.expenses
-            .Where(exp => exp.CowId == id)
+            .Where(exp => exp.CowId == id && exp.Category=="Feed")
             .GroupBy(exp => exp.CowId)
             .Select(group => new
             {
                 TotalExpenses = group.Sum(e => e.Amount)
+            })
+            .FirstOrDefaultAsync();
+
+            var MedicalExpense= await _context.expenses
+            .Where(exp => exp.CowId == id && exp.Category == "Medical")
+            .GroupBy(exp => exp.CowId)
+            .Select(group => new
+            {
+                MedicalExpenses = group.Sum(e => e.Amount)
             })
             .FirstOrDefaultAsync();
 
@@ -71,7 +80,11 @@ namespace DairyFarm.Pages.Cattle
                 cowDetails.TotalMilkProduced = milkData?.TotalMilkProduction ?? 0;
                 cowDetails.MilkIncome = milkData?.TotalMilkIncome ?? 0;
                 cowDetails.FeedExpense = expenseData?.TotalExpenses ?? 0;
+                cowDetails.MedicalExpense= MedicalExpense?.MedicalExpenses ?? 0;
+                cowDetails.Profit=(cowDetails.MilkIncome)-(cowDetails.FeedExpense)- (MedicalExpense?.MedicalExpenses ?? 0);
+                
             }
+
 
 
 
