@@ -80,7 +80,6 @@ namespace DairyFarm.Pages.Cattle
                 return NotFound("Cow not found.");
             }
 
-            // Use the correct path for the partial view
             return Partial("Partials/_CowDetails", cowDetails);
         }
 
@@ -144,7 +143,6 @@ namespace DairyFarm.Pages.Cattle
 
             _context.SaveChanges();
 
-            // Return a JSON response indicating success
             return new JsonResult(new { success = true });
             }
             else
